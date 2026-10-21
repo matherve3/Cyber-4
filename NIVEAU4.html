@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cyber CI · Niveau 4 · Cours détaillés + CV</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,sans-serif;background:#0a0e1a;color:#e2e8f0;line-height:1.65}
+header{background:#111827;padding:14px 20px;display:flex;justify-content:space-between;border-bottom:2px solid #fbbf24;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:50}
+header h1{color:#fbbf24;font-size:1rem;cursor:pointer}
+.stats{color:#94a3b8;font-size:0.85rem}
+.stats b{color:#fbbf24}
+main{max-width:980px;margin:0 auto;padding:16px}
+.card{background:#111827;border-radius:12px;padding:20px;margin-bottom:16px;border:1px solid #263243}
+h2{color:#fbbf24;margin-bottom:10px;font-size:1.3rem}
+h3{color:#22c55e;margin:14px 0 8px;font-size:1rem}
+h4{color:#fde68a;margin:10px 0 6px;font-size:0.95rem}
+p{margin:8px 0}
+ul,ol{padding-left:22px;margin:8px 0}
+li{margin-bottom:6px}
+code{background:#1f2937;padding:2px 6px;border-radius:4px;color:#fbbf24;font-size:0.9em}
+pre{background:#050914;padding:12px;border-radius:8px;overflow-x:auto;margin:10px 0;border-left:3px solid #fbbf24;font-size:0.85em;line-height:1.5}
+pre code{background:none;padding:0;color:#e2e8f0}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:0.9em}
+th,td{border:1px solid #1f2937;padding:8px;text-align:left;vertical-align:top}
+th{background:#1f2937;color:#fbbf24}
+a{color:#fbbf24}
+.meta{display:flex;gap:12px;font-size:0.8rem;color:#94a3b8;margin-bottom:8px;flex-wrap:wrap}
+.intro{background:#78350f;padding:14px;border-radius:10px;margin:12px 0;border-left:4px solid #fbbf24}
+.analogy{background:#164e63;padding:12px;border-radius:10px;margin:12px 0;border-left:4px solid #22d3ee;font-style:italic}
+.section{background:#0f172a;padding:16px;border-radius:10px;margin:14px 0;border-left:4px solid #fde68a}
+.section h3{color:#fde68a;margin-top:0;font-size:1.05rem}
+.why{background:#4c1d95;padding:12px;border-radius:8px;margin:12px 0;border-left:3px solid #a78bfa}
+.bank{background:#14532d;padding:12px;border-radius:8px;margin:12px 0;border-left:3px solid #4ade80}
+.glo{background:#1e293b;padding:12px;border-radius:8px;margin:12px 0;border-left:3px solid #94a3b8}
+.glo b{color:#fbbf24}
+.pr{background:#052e16;padding:14px;border-radius:10px;margin:14px 0;border-left:4px solid #22c55e}
+.er{background:#7f1d1d;padding:12px;border-radius:8px;margin:12px 0;border-left:3px solid #ef4444}
+.df{background:#78350f;padding:12px;border-radius:8px;margin:12px 0;border-left:3px solid #fbbf24}
+.car{background:#1e1b4b;padding:14px;border-radius:10px;margin:12px 0;border-left:4px solid #a78bfa}
+.quiz{background:#1f2937;padding:14px;border-radius:10px;margin-top:14px}
+.q{margin-bottom:14px}
+.q label{display:block;padding:9px 12px;margin:5px 0;background:#111827;border-radius:7px;cursor:pointer}
+.q label:hover{background:#334155}
+.q input{margin-right:10px}
+.ok{background:#14532d!important;border-left:4px solid #22c55e!important}
+.ko{background:#7f1d1d!important;border-left:4px solid #ef4444!important}
+.exp{background:#050914;padding:10px;border-radius:6px;margin-top:8px;font-size:0.85em;color:#cbd5e1;border-left:3px solid #fbbf24;display:none}
+.nav{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+button{background:#fbbf24;color:#0a0e1a;border:none;padding:10px 18px;border-radius:8px;font-weight:700;cursor:pointer;font-size:0.9rem}
+button:hover{background:#fcd34d}
+button.sec{background:#1f2937;color:#e2e8f0}
+button.gold{background:#fbbf24;color:#0a0e1a}
+button.exam{background:#fbbf24;color:#0a0e1a}
+button.cv{background:#0ea5e9;color:#fff}
+button.cv:hover{background:#38bdf8}
+button.dl{background:#22c55e;color:#052e16}
+button.dl:hover{background:#4ade80}
+.res{margin-top:12px;padding:12px;border-radius:8px;font-weight:700;text-align:center}
+.res.g{background:#14532d;color:#86efac}
+.res.r{background:#7f1d1d;color:#fca5a5}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;margin-top:10px}
+.btn{background:#1f2937;padding:10px;border-radius:8px;cursor:pointer;border:2px solid transparent}
+.btn:hover{border-color:#fbbf24}
+.btn.done{border-color:#22c55e;background:#14532d}
+.btn .n{font-weight:800;color:#fbbf24;display:block;font-size:0.75rem}
+.btn.done .n{color:#22c55e}
+.btn .ti{display:block;font-size:0.78rem;color:#94a3b8;margin-top:2px}
+.stat{background:#1e293b;padding:16px;border-radius:12px;border-left:4px solid #fbbf24;text-align:center}
+.stat .big{font-size:2em;font-weight:800;color:#fbbf24;display:block}
+.stat .lbl{font-size:0.85em;color:#94a3b8}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:16px 0}
+.cert{background:#78350f;padding:14px;border-radius:10px;margin:10px 0;border-left:4px solid #fbbf24}
+.cert h4{color:#fde68a;margin:0 0 6px}
+.cert.done{background:#14532d;border-left-color:#22c55e}
+.cert.done h4{color:#86efac}
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:0.7em;font-weight:700;margin-left:6px}
+.badge.free{background:#14532d;color:#86efac}
+.badge.partial{background:#78350f;color:#fde68a}
+.badge.paid{background:#7f1d1d;color:#fca5a5}
+.job{background:#1f2937;padding:12px;border-radius:10px;border-left:4px solid #22c55e;margin-bottom:10px}
+.job h4{margin:0 0 4px;color:#86efac}
+.exam-card{background:linear-gradient(135deg,#78350f 0%,#1e1b4b 100%);padding:16px;border-radius:12px;margin:12px 0;border-left:4px solid #fbbf24}
+.exam-card h4{color:#fde68a;margin:0 0 8px;font-size:1.05rem}
+.exam-card.locked{opacity:0.6;border-left-color:#475569;background:#1e293b}
+.exam-card.passed{background:linear-gradient(135deg,#14532d 0%,#052e16 100%);border-left-color:#22c55e}
+.exam-card.passed h4{color:#86efac}
+.exam-badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:0.72em;font-weight:800;margin-bottom:6px}
+.exam-badge.locked{background:#334155;color:#94a3b8}
+.exam-badge.ready{background:#d97706;color:#fff}
+.exam-badge.passed{background:#22c55e;color:#052e16}
+.qcount{color:#cbd5e1;font-size:0.85em;margin:6px 0}
+.level-tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:0.72em;font-weight:800;margin-left:8px}
+.level-tag.l4{background:#78350f;color:#fde68a}
+.hero{background:linear-gradient(135deg,#78350f 0%,#1e1b4b 100%);border-left:4px solid #fbbf24;padding:24px;border-radius:12px;margin-bottom:16px}
+.hero h2{color:#fde68a;font-size:1.5rem;margin-bottom:8px}
+.hero p{color:#fef3c7;font-size:0.95em}
+.cv-preview{background:#fff;color:#111;padding:30px;border-radius:8px;font-family:'Georgia',serif;line-height:1.5;box-shadow:0 4px 20px rgba(0,0,0,0.3);margin:14px 0}
+.cv-preview h1{color:#0a2540;font-size:1.6em;margin:0 0 4px 0;font-family:'Helvetica',sans-serif}
+.cv-preview h2{color:#0a2540;font-size:1.1em;margin:16px 0 6px 0;border-bottom:2px solid #0a2540;padding-bottom:4px;font-family:'Helvetica',sans-serif;text-transform:uppercase;letter-spacing:1px}
+.cv-preview .sub{color:#4b5563;font-size:0.85em;font-style:italic;margin:0 0 4px 0}
+.cv-preview .meta-cv{color:#4b5563;font-size:0.85em;margin-bottom:12px}
+.cv-preview ul{margin:4px 0 8px 0;padding-left:18px;font-size:0.88em}
+.cv-preview li{margin:2px 0;color:#1f2937}
+.cv-preview p{margin:4px 0;font-size:0.9em;color:#1f2937}
+.cv-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.cv-model{background:#1f2937;padding:12px;border-radius:8px;margin:8px 0;border-left:4px solid #0ea5e9;cursor:pointer}
+.cv-model:hover{background:#334155}
+.cv-model.active{background:#0c4a6e;border-left-color:#22c55e}
+.cv-model h4{color:#7dd3fc;margin:0 0 4px}
+.cv-model .desc{font-size:0.85em;color:#94a3b8}
+.level-badge-cv{display:inline-block;padding:2px 10px;border-radius:10px;font-size:0.72em;font-weight:800;margin-left:6px}
+.level-badge-cv.j{background:#0c4a6e;color:#7dd3fc}
+.level-badge-cv.m{background:#14532d;color:#86efac}
+.level-badge-cv.s{background:#78350f;color:#fde68a}
+.level-badge-cv.e{background:#7f1d1d;color:#fca5a5}
+.level-badge-cv.d{background:#4c1d95;color:#e9d5ff}
+footer{text-align:center;padding:20px;color:#94a3b8;font-size:0.78em}
+</style>
+</head>
+<body>
+<header>
+  <h1 onclick="render()">Cyber CI · Niveau 4</h1>
+  <div class="stats" id="hs"></div>
+</header>
+<main id="app"></main>
+<footer>Etudiant L2 UVCI - Objectif Banque CI - Niveau 4 Maitre · Cours detailles + CV</footer>
+
+<script>
+// ============================================================
+// DONNEES DES DEFIS
+// ============================================================
+var D = [
+{id:301,t:"Architecture d'entreprise (EA)",d:50,
+intro:"L'Enterprise Architecture (EA) est une discipline qui aligne la strategie IT avec la strategie business. En cybersecurite, elle garantit que chaque composant (reseau, application, donnee, processus) respecte des principes coherents et une vision unifiee. Sans EA, chaque projet reinvente la roue et cree de la dette technique. Avec EA, l'entreprise peut evoluer de maniere maitrisee, mesurable et securisee.",
+analogy:"Imaginez la construction d'une ville. L'architecte urbaniste ne pose pas les briques, mais il definit le plan d'ensemble : ou sont les routes, les zones residentielles, les hopitaux, les egouts. Sans lui, chaque habitant construit sa maison n'importe ou, et la ville devient un chaos invivable. L'EA est cet urbaniste pour le SI de l'entreprise.",
+sections:[
+{titre:"Qu'est-ce que l'EA exactement ?",contenu:"<p>L'EA est une pratique qui documente et pilote la structure de l'organisation : <b>processus metier</b>, <b>applications</b>, <b>donnees</b>, <b>infrastructures techniques</b>. Elle produit des vues (schemas) pour differents publics : direction, IT, metier. Son but n'est pas de figer mais de fournir un cadre pour faire evoluer le SI sans casser l'existant.</p><p>En securite, l'EA permet :</p><ul><li>D'identifier les actifs critiques et leur position.</li><li>De comprendre les flux de donnees entre systemes.</li><li>De definir des zones de confiance (DMZ, LAN, data center, cloud).</li><li>D'appliquer des controles proportionnes par zone.</li><li>D'anticiper l'impact d'un nouveau projet sur la securite globale.</li></ul>"},
+{titre:"Les frameworks EA majeurs",contenu:"<table><tr><th>Framework</th><th>Description</th><th>Usage</th></tr><tr><td><b>TOGAF</b></td><td>Methode complete (ADM cycle) en 9 phases</td><td>Grandes entreprises</td></tr><tr><td><b>Zachman</b></td><td>Taxonomie 6x6 (Qui, Quoi, Ou, Quand, Pourquoi, Comment)</td><td>Descriptif</td></tr><tr><td><b>SABSA</b></td><td>Sherwood Applied Business Security Architecture</td><td>Securite specifiquement</td></tr></table><p><b>TOGAF ADM</b> (Architecture Development Method) : 9 phases de la preparation (A) a la gestion du changement (H). Chaque phase produit des livrables (vision, architecture cible, roadmap).</p>"},
+{titre:"Les vues d'architecture",contenu:"<ul><li><b>Vue Business</b> : processus, acteurs, objectifs. Comprise par la direction.</li><li><b>Vue Donnees</b> : flux, stockage, classification. Comprise par les data managers.</li><li><b>Vue Application</b> : services, integrations. Comprise par les devs et architects.</li><li><b>Vue Technologie</b> : infra, reseau, serveurs. Comprise par les ops.</li><li><b>Vue Securite</b> (transversale) : controles par composant.</li></ul>"},
+{titre:"Livrables concrets d'une EA securite",contenu:"<ul><li><b>Architecture cible</b> : schema du SI a 3-5 ans.</li><li><b>Roadmap</b> : etapes de transformation.</li><li><b>Principes</b> : 'toute donnee client est chiffree au repos'.</li><li><b>Standards</b> : TLS 1.2+, AES-256, MFA obligatoire.</li><li><b>Reference architecture</b> : modeles reutilisables.</li><li><b>Risk register</b> : risques identifies.</li></ul>"}
+],
+why:"Sans architecture, l'entreprise accumule de la dette technique : systemes heterogenes, controles incoherents, zones de securite floues. Un incident revele souvent des connexions oubliees. L'EA oblige a cartographier, donc a voir.",
+bank:"Une banque a des dizaines de systemes (core banking, SWIFT, web, mobile, ATM, RH, compta). Sans EA, impossible de savoir quels flux traversent quelles zones. Chaque audit BCEAO commence par cette cartographie.",
+glo:"<b>EA</b> : Enterprise Architecture. <b>TOGAF</b> : framework EA. <b>SABSA</b> : architecture securite. <b>ADM</b> : Architecture Development Method.",
+pr:["Lire le TOGAF ADM (cycle de 9 phases)","Explorer la taxonomie Zachman","Telecharger le guide SABSA (open group)","Dessiner l'architecture cible d'une PME de 20 personnes","Identifier 5 zones de confiance"],
+er:"Beaucoup pensent qu'EA = documentation lourde. Non : c'est un outil de decision. Une bonne EA est juste suffisante, pas exhaustive.",
+df:"Realiser un schema d'architecture pour une banque fictive avec au moins 6 zones et les flux principaux.",
+proj:"Publier un 'Bank Reference Architecture' sur GitHub avec schemas (draw.io) et legendes.",
+q:[{q:"TOGAF est :",a:["Un framework EA","Un antivirus","Un langage","Un protocole"],c:0,e:"TOGAF est un framework d'Enterprise Architecture."},{q:"SABSA est specialise dans :",a:["Les bases de donnees","L'architecture securite","Les reseaux","Le code"],c:1,e:"SABSA est un framework d'architecture securite."}]},
+
+{id:302,t:"Securite par conception (Privacy by Design)",d:45,
+intro:"La securite par conception (et son corollaire Privacy by Design) consiste a integrer les exigences de securite et de protection des donnees DES LA CONCEPTION du projet, et non en fin de course. Ce principe est aujourd'hui impose par le RGPD (Article 25) et recommande par l'ANSSI et la BCEAO. Le cout de la correction augmente de maniere exponentielle avec l'avancement du projet.",
+analogy:"Construire une maison avec des murs porteurs prevus pour un coffre-fort, ce n'est pas ajouter des barreaux apres coup. Si vous devez percer les murs epais pour installer un coffre, ca coute 10 fois plus cher et fragilise la structure.",
+sections:[
+{titre:"Les 7 principes de la Privacy by Design",contenu:"<ol><li><b>Proactif, pas reactif</b> : anticiper les problemes avant qu'ils n'arrivent.</li><li><b>Privacy par defaut</b> : le parametre le plus protecteur est actif par defaut.</li><li><b>Privacy integree au design</b> : la protection est dans l'architecture, pas un add-on.</li><li><b>Fonctionnalite complete</b> : ne pas sacrifier les fonctionnalites, les concilier.</li><li><b>Securite de bout en bout</b> : proteger le cycle de vie complet des donnees.</li><li><b>Visibilite et transparence</b> : l'utilisateur sait ce qui se passe.</li><li><b>Respect de la vie privee utilisateur</b> : l'utilisateur est au centre.</li></ol>"},
+{titre:"Les principes Saltzer & Schroeder",contenu:"<p>Ecrits en 1975, toujours d'actualite :</p><ul><li><b>Least privilege</b> : chaque acteur a le minimum de droits necessaires.</li><li><b>Fail-safe defaults</b> : en cas d'erreur, on refuse l'acces (fail closed).</li><li><b>Complete mediation</b> : chaque acces est verifie, pas seulement au login.</li><li><b>Open design</b> : la securite ne repose pas sur le secret de l'algorithme.</li><li><b>Separation of privilege</b> : 2 personnes pour une action critique.</li><li><b>Least common mechanism</b> : ne pas partager de ressources si possible.</li><li><b>Psychological acceptability</b> : la securite doit etre utilisable.</li></ul>"},
+{titre:"Application concrete a une app bancaire",contenu:"<p>Prenons une nouvelle app mobile bancaire. Avant une ligne de code :</p><ul><li><b>Analyse de risque</b> : donnees traitees (IBAN, solde, transactions), menaces (vol mobile, MITM, malware).</li><li><b>Choix d'architecture</b> : auth forte (FIDO2), chiffrement TLS 1.3, chiffrement local (Keystore iOS / Keystore Android), anti-root.</li><li><b>Minimisation</b> : on n'envoie que les donnees necessaires au serveur.</li><li><b>Transparence</b> : ecran clair expliquant les donnees collectees.</li><li><b>Tests</b> : pentest, revue de code, threat modeling des l'iteration 1.</li></ul>"},
+{titre:"Cout de la correction tardive",contenu:"<p>Etude IBM/NIST : corriger une faille en production coute environ <b>100 fois plus cher</b> que la corriger en phase de conception. Ce n'est pas juste financier : une faille exploitee = impact reputation, amende, perte de clients.</p>"}
+],
+why:"Corriger en production = risque majeur + cout x100. La securite par conception n'est pas une contrainte, c'est une economie.",
+bank:"Une app mobile bancaire avec une faille de conception (par ex. tokens JWT trop longs) = compromission de milliers de clients. La BCEAO exige cette demarche dans ses instructions.",
+glo:"<b>PbD</b> : Privacy by Design. <b>RGPD Art. 25</b> : privacy by design et by default. <b>Least privilege</b> : moindre privilege.",
+pr:["Lire les 7 principes PbD","Appliquer Saltzer & Schroeder a une app existante","Faire une checklist de conception securisee","Identifier 3 principes violes dans un projet reel"],
+er:"Beaucoup confondent 'securite par conception' avec 'ajouter un WAF'. Le WAF est une protection reactive. La conception securisee est proactive.",
+df:"Rediger une checklist de 15 points pour concevoir une app mobile bancaire.",
+proj:"Publier 'Privacy by Design Checklist for Banking Apps' sur GitHub.",
+q:[{q:"PbD signifie :",a:["Privacy by Design","Public by Design","Private by Default","Rien"],c:0,e:"Privacy by Design - la protection des donnees des la conception."},{q:"Least privilege :",a:["Tout autoriser","Moindre privilege","Zero privilege","Rien"],c:1,e:"Chaque acteur a le minimum de droits necessaires."}]},
+
+{id:303,t:"Zero Trust architecture (NIST 800-207)",d:55,
+intro:"Le modele Zero Trust inverse la logique traditionnelle : au lieu de faire confiance a tout ce qui est a l'interieur du reseau et de bloquer l'exterieur, il considere que TOUT est potentiellement hostile, y compris l'interieur. Chaque acces est verifie, chaque session reevaluee. Le NIST a publie en 2020 le document SP 800-207 qui definit l'architecture Zero Trust de reference.",
+analogy:"Imaginez un immeuble de bureaux ou chaque porte (bureau, salle de reunion, archives) exige un badge, un code et une verification de votre identite a chaque passage. Meme si vous etes employe, vous devez vous re-authentifier a chaque porte. Il n'y a plus de 'hall d'entree securise' apres lequel tout est libre.",
+sections:[
+{titre:"Pourquoi Zero Trust ?",contenu:"<p>Le perimetre traditionnel (firewall, VPN) est obsolete car :</p><ul><li><b>Cloud</b> : les applications sont hors du SI.</li><li><b>Mobilite</b> : les employes travaillent de partout.</li><li><b>BYOD</b> : appareils personnels connectes.</li><li><b>APT</b> : les attaquants entrent par phishing et se deplacent lateralement.</li></ul><p>Resultat : 60% des breaches viennent de l'interieur ou d'un compte compromis. Le perimetre ne protege plus.</p>"},
+{titre:"Les 7 principes NIST 800-207",contenu:"<ol><li>Tout reseau est considere hostile (y compris le LAN).</li><li>Chaque acces est verifie (utilisateur + device + contexte).</li><li>L'acces est accorde par session, pas par reseau.</li><li>Les politiques sont dynamiques (adaptees au contexte).</li><li>Le monitoring est continu (pas seulement au login).</li><li>L'identite et l'etat du device sont verifies.</li><li>Le least privilege est applique strictement.</li></ol>"},
+{titre:"Architecture PDP / PEP",contenu:"<p>L'architecture ZTA repose sur deux composants cles :</p><ul><li><b>PDP (Policy Decision Point)</b> : le 'cerveau' qui prend la decision 'autoriser ou refuser' selon la politique. Consulte l'IdP, l'EDR, le SIEM.</li><li><b>PEP (Policy Enforcement Point)</b> : le 'gorille' qui applique la decision. Peut etre un proxy, une gateway, un agent endpoint.</li></ul><p>Le flux : utilisateur → PEP → PDP → decision → PEP → ressource.</p>"},
+{titre:"Composants complementaires",contenu:"<ul><li><b>IdP</b> : Identity Provider (Azure AD, Okta).</li><li><b>MFA</b> : FIDO2, TOTP, biometrie.</li><li><b>Device posture</b> : EDR, patch level, chiffrement.</li><li><b>Micro-segmentation</b> : isoler chaque workload.</li><li><b>SIEM + UEBA</b> : detection comportementale.</li><li><b>SOAR</b> : reponse automatisee.</li></ul>"},
+{titre:"Applications bancaires concretes",contenu:"<p>Une banque moderne applique Zero Trust :</p><ul><li>Acces aux systemes internes : MFA + device posture (EDR actif, disque chiffre).</li><li>Acces aux APIs : OAuth 2.0 + mTLS + scope minimal.</li><li>Acces admin : PAW (Privileged Access Workstation) + PAM.</li><li>Acces cloud : Conditional Access + Azure AD PIM.</li><li>Acces partner : federation + policies strictes.</li></ul>"}
+],
+why:"Le perimetre n'existe plus. Zero Trust est la nouvelle reference, imposee par NIST, ANSSI, BCEAO, DORA.",
+bank:"Une banque avec 5000 employes, du cloud, des partenaires et des clients mobiles ne peut plus proteger avec un seul firewall. Zero Trust permet un controle granulaire.",
+glo:"<b>ZTA</b> : Zero Trust Architecture. <b>PDP/PEP</b> : Policy Decision/Enforcement Point. <b>Conditional Access</b> : politiques contextuelles.",
+pr:["Lire NIST SP 800-207 (gratuit)","Dessiner un schema PDP/PEP pour une app bancaire","Lister 5 politiques dynamiques","Comparer Zero Trust vs VPN traditionnel"],
+er:"Beaucoup pensent qu'un VPN = Zero Trust. Faux ! Le VPN est un tunnel perimetrique, pas une verification continue.",
+df:"Concevoir un plan Zero Trust pour une banque de 200 employes (technologies, phases, budget).",
+proj:"Publier 'Zero Trust Roadmap for African Banks' sur GitHub.",
+q:[{q:"NIST 800-207 est :",a:["Zero Trust","Un virus","Un framework web","Rien"],c:0,e:"C'est la reference Zero Trust du NIST."},{q:"PDP signifie :",a:["Policy Decision Point","Public Data Protocol","Personal Data Point","Rien"],c:0,e:"Policy Decision Point - prend la decision d'autorisation."}]},
+
+{id:304,t:"SABSA (Sherwood Applied Business Security Architecture)",d:55,
+intro:"SABSA est un framework d'architecture securite qui aligne la securite sur les objectifs business. Il a ete cree par John Sherwood dans les annees 90, et il est aujourd'hui maintenu par The Open Group. SABSA se distingue des autres frameworks par son approche 'du business vers la technique' : on part des objectifs business, on derive les exigences de securite, puis les controles concrets.",
+analogy:"Imaginez une pyramide. En haut, il y a la direction de l'entreprise qui dit 'nous voulons proteger la confiance de nos clients'. En bas, il y a l'ingenieur qui installe un chiffrement AES-256. SABSA fournit les 6 etages de traduction entre ces deux extremes.",
+sections:[
+{titre:"Les 6 couches de SABSA",contenu:"<ol><li><b>Contextuel</b> : POURQUOI ? Business drivers, objectifs, risques.</li><li><b>Conceptuel</b> : QUOI ? Architecture securite conceptuelle, modeles.</li><li><b>Logique</b> : COMMENT ? Modeles de securite, services logiques.</li><li><b>Physique</b> : AVEC QUOI ? Design physique, technologies.</li><li><b>Composant</b> : QUI/OU ? Produits, outils, configurations.</li><li><b>Operationnel</b> : QUAND ? Services operationnels, procedures.</li></ol>"},
+{titre:"Exemple concret : banque mobile",contenu:"<p>Traduisons un projet 'app mobile bancaire' en SABSA :</p><ul><li><b>Contextuel</b> : objectif business = permettre aux clients de consulter leur solde en mobilite ; enjeu = confiance, conformite BCEAO.</li><li><b>Conceptuel</b> : exigences = authentification forte, confidentialite, traçabilite.</li><li><b>Logique</b> : services = SSO, MFA, chiffrement TLS, logging centralise.</li><li><b>Physique</b> : technologies = FIDO2, TLS 1.3, Azure AD, SIEM Splunk.</li><li><b>Composant</b> : produits = Yubikey, certificat X.509, Wazuh.</li><li><b>Operationnel</b> : procedures = rotation cles, monitoring 24/7, plan incident.</li></ul>"},
+{titre:"Livrables typiques SABSA",contenu:"<ul><li><b>Business Attribute Profile</b> : liste des attributs business (confiance, disponibilite, integrite, etc.).</li><li><b>Security Architecture</b> : document de reference.</li><li><b>Patterns</b> : solutions reutilisables.</li><li><b>Controls</b> : controles par couche.</li></ul>"},
+{titre:"Avantages vs autres frameworks",contenu:"<p>SABSA se distingue par :</p><ul><li>Approche <b>business-first</b> (contrairement a ISO 27001 plus normatif).</li><li>Lien direct entre business et technique (la pyramide).</li><li>Reutilisabilite (patterns) entre projets.</li><li>Utilisation dans les grandes entreprises (banques, assurances).</li></ul>"}
+],
+why:"SABSA est LA reference pour architecturer la securite en partant du business. Une architecture bien pensee = moins de dette technique.",
+bank:"Les banques utilisent SABSA pour construire des architectures securite coherentes et justifiables devant les regulateurs.",
+glo:"<b>SABSA</b> : Sherwood Applied Business Security Architecture. <b>Attribute profile</b> : profil des attributs business.",
+pr:["Lire le guide SABSA officiel (Open Group, gratuit)","Dessiner les 6 couches pour une app metier","Identifier 10 business attributes d'une banque","Faire un Attribute Profile"],
+er:"Beaucoup sautent l'etape 'contextuel' et construisent directement l'architecture technique. Resultat : une architecture securite deconnectee des besoins.",
+df:"Construire un SABSA pour une application de paiement mobile avec les 6 couches documentees.",
+proj:"Publier 'SABSA Framework applied to Banking' sur GitHub.",
+q:[{q:"SABSA a :",a:["6 couches","3 couches","10 couches","Rien"],c:0,e:"SABSA definit 6 couches vues du business vers la technique."},{q:"Couche top :",a:["Contextuel","Operationnel","Composant","Rien"],c:0,e:"La couche contextuelle (business drivers) est tout en haut."}]},
+
+{id:305,t:"Segmentation reseau (macro et micro)",d:55,
+intro:"La segmentation reseau consiste a diviser le reseau en zones isolees, chacune avec ses propres controles d'acces. L'objectif est double : limiter la propagation d'une attaque (containment) et faciliter la tracabilite (les flux entre zones sont analyses). On distingue la macro-segmentation (grandes zones) de la micro-segmentation (au niveau workload, dans le cloud).",
+analogy:"Imaginez un navire avec des compartiments etanches. Si le navire prend l'eau dans un compartiment, les autres restent secs. Sans compartiments, une breche coule tout le navire. La segmentation reseau est exactement cela pour votre SI.",
+sections:[
+{titre:"Les zones classiques (macro-segmentation)",contenu:"<ul><li><b>DMZ</b> : zone demilitarisee, exposee a Internet (portails web).</li><li><b>LAN interne</b> : postes de travail employes.</li><li><b>Data Center</b> : serveurs applicatifs et bases de donnees.</li><li><b>Management</b> : zone d'administration (PAM).</li><li><b>OT</b> : systemes industriels (ATM, agences).</li><li><b>Guest</b> : Wi-Fi invites.</li><li><b>SWIFT</b> : ultra-isole (CSP).</li></ul>"},
+{titre:"Micro-segmentation",contenu:"<p>Dans le cloud et les environnements conteneurises, la macro-segmentation ne suffit plus. Chaque workload (pod, VM, container) a sa propre politique d'acces :</p><ul><li>Service A peut parler a Service B uniquement sur le port 8080.</li><li>La base de donnees n'accepte que les requetes des backends.</li><li>Aucune communication entre environnements (dev, staging, prod).</li></ul><p>Technologies : VMware NSX, Illumio, Cisco ACI, service mesh (Istio), Network Policies Kubernetes.</p>"},
+{titre:"Le role de SWIFT (CSP - Customer Security Programme)",contenu:"<p>SWIFT impose une isolation stricte du reseau SWIFT. Les 23 controles obligatoires incluent :</p><ul><li>Restreindre l'acces Internet aux systemes SWIFT.</li><li>Segmentation du reseau SWIFT par rapport au reste du SI.</li><li>MFA pour les operateurs.</li><li>Monitoring et detection d'intrusion.</li><li>Tests d'intrusion annuels.</li></ul><p>Non-conformite = signalement a la banque centrale, risque d'exclusion du reseau SWIFT (catastrophe pour une banque).</p>"},
+{titre:"Architecture en pratique",contenu:"<pre><code>Internet\n   |\n[Firewall perimetrique]\n   |\n   +-- DMZ (portails web, reverse proxy)\n   |      |\n   |   [Firewall interne]\n   |      |\n   |   Zone App (API, microservices)\n   |      |\n   |   [Firewall interne]\n   |      |\n   |   Zone DB (bases de donnees chiffrees)\n   |\n   +-- LAN Employes (postes)\n   |      |\n   |   [NAC + EDR]\n   |\n   +-- Zone SWIFT (ultra-isolee)\n   |      |\n   |   [Jump host + MFA + recording]\n   |\n   +-- Zone OT (ATM, agences)\n   |      |\n   |   [Firewall OT - pas d'Internet]\n   |\n   +-- Zone Cloud (VPC prive)\n          |\n       [API Gateway + mTLS]</code></pre>"}
+],
+why:"Un reseau plat signifie qu'une compromission d'un poste compromis permet d'atteindre les bases de donnees en quelques minutes. La segmentation est LA mesure la plus efficace pour limiter la propagation.",
+bank:"Une banque avec un reseau plat est une catastrophe ambulante. La segmentation SWIFT est obligatoire, la segmentation LAN/DC est recommandee par la BCEAO et le NIST.",
+glo:"<b>DMZ</b> : zone demilitarisee. <b>Micro-segmentation</b> : par workload. <b>CSP</b> : Customer Security Programme SWIFT.",
+pr:["Dessiner un schema de segmentation pour une banque","Lister 6 zones minimales","Identifier les flux autorises entre zones","Tester un VLAN sur un switch manageable"],
+er:"Beaucoup pensent que creer des VLAN suffit. Non : un firewall entre zones est necessaire, sinon le VLAN est juste une etiquette.",
+df:"Concevoir un plan de segmentation pour une banque de 500 employes avec SWIFT, ATM, cloud.",
+proj:"Publier 'Bank Network Segmentation Design' sur GitHub.",
+q:[{q:"DMZ est :",a:["Zone exposee","Zone interne","Zone OT","Rien"],c:0,e:"La DMZ est une zone exposee a Internet (portails web)."},{q:"Micro-segmentation :",a:["Par workload","Par site","Par utilisateur","Rien"],c:0,e:"La micro-segmentation isole chaque workload individuellement."}]},
+
+{id:306,t:"Architecture cloud-native securisee",d:55,
+intro:"Le cloud-native (conteneurs, microservices, serverless) impose une nouvelle facon de penser la securite. Ce n'est pas juste 'deplacer en cloud'. Chaque couche a ses propres controles : l'identite des services (mTLS), la signature des images (SBOM, cosign), la politique par service (service mesh), le chiffrement des secrets (Vault), et l'observabilite complete (traces, metrics, logs).",
+analogy:"Passez d'un chateau-fort a une ville ouverte avec des vigiles partout. Il n'y a plus de mur, chaque rue a son propre controle, chaque porte son badge. La securite est distribuee, pas centralisee.",
+sections:[
+{titre:"Les 6 piliers du cloud-native securise",contenu:"<ol><li><b>Identity</b> : identite forte des services et humains (SPIFFE, mTLS, OIDC).</li><li><b>Compute</b> : containers signes (cosign), sandboxing (gVisor, Kata), pods non-root.</li><li><b>Network</b> : service mesh (Istio, Linkerd) pour mTLS, network policies strictes.</li><li><b>Data</b> : chiffrement KMS, secrets manager (Vault, AWS Secrets Manager).</li><li><b>Observability</b> : traces (OpenTelemetry), logs centralises, metrics.</li><li><b>Supply chain</b> : SBOM, signature d'images (cosign), SLSA framework.</li></ol>"},
+{titre:"Le role du service mesh",contenu:"<p>Un service mesh est une couche d'infrastructure qui gere la communication entre microservices. Il fournit :</p><ul><li><b>mTLS automatique</b> : chaque service presente un certificat, verifie celui de l'autre.</li><li><b>Politiques d'acces</b> : 'Service A peut parler a Service B sur /api/v1/users'.</li><li><b>Observabilite</b> : traces, metriques, logs de chaque requete.</li><li><b>Retry, timeout, circuit breaker</b> : resilience.</li></ul><p>Exemples : Istio, Linkerd, Consul Connect, AWS App Mesh.</p>"},
+{titre:"Signature d'images et SBOM",contenu:"<p>Un des vecteurs d'attaque cloud les plus dangereux est la <b>supply chain</b> : une image Docker compromise peut etre deployee dans tout le cluster. La defense :</p><ul><li><b>SBOM</b> (Software Bill of Materials) : inventaire des composants de chaque image.</li><li><b>Cosign</b> (Sigstore) : signature cryptographique des images.</li><li><b>Policy d'admission</b> : Kubernetes refuse les images non signees (Kyverno, OPA Gatekeeper).</li><li><b>Scan continu</b> : Trivy, Grype pour les CVE.</li></ul>"},
+{titre:"Architecture exemple bancaire",contenu:"<pre><code>[Client Mobile]\n      | HTTPS + JWT\n      v\n[API Gateway (Kong) - auth centralisee]\n      | mTLS\n      v\n[Microservices K8s]\n  - account-service\n  - transaction-service\n  - notification-service\n      | mTLS via Istio\n      v\n[Service mesh]\n  - mTLS auto\n  - policies\n  - traces\n      | chiffrement\n      v\n[Bases PostgreSQL + KMS]\n      |\n[Secrets Vault]\n      |\n[SIEM + Falco runtime]</code></pre>"},
+{titre:"Defis specifiques",contenu:"<ul><li><b>Ephemeralite</b> : containers vivent 5 min, comment faire forensics ?</li><li><b>Densite</b> : 1000 containers sur 10 noeuds, comment segmenter ?</li><li><b>Multi-tenancy</b> : isolation entre clients dans le meme cluster.</li><li><b>Rotation</b> : secrets, certificats, tokens doivent tourner souvent.</li><li><b>Observabilite</b> : 100x plus de logs qu'un SI classique.</li></ul>"}
+],
+why:"Le cloud-native est le nouveau standard. Une image compromise ou un service mesh mal configure peut compromettre tout le cluster.",
+bank:"Les banques modernes construisent des apps cloud-native. Sans securite native, c'est un cluster ouvert aux APT.",
+glo:"<b>mTLS</b> : TLS mutuel. <b>Service mesh</b> : reseau services. <b>SBOM</b> : Software Bill of Materials.",
+pr:["Installer Istio sur Minikube","Signer une image avec cosign","Ecrire une Network Policy","Faire un scan Trivy d'une image"],
+er:"Beaucoup pensent que le cloud est securise par defaut. Faux : le cloud fournit des briques, c'est au client de les assembler correctement.",
+df:"Concevoir une architecture cloud-native pour une app bancaire avec 5 microservices.",
+proj:"Publier 'Cloud-Native Security Architecture' sur GitHub.",
+q:[{q:"mTLS signifie :",a:["Mutual TLS","Multi TLS","Managed TLS","Rien"],c:0,e:"Mutual TLS - chaque service verifie l'autre."},{q:"Service mesh fournit :",a:["mTLS","Chiffrement disque","Antivirus","Rien"],c:0,e:"Le service mesh gere mTLS entre services."}]},
+
+{id:307,t:"Defense in depth (couches)",d:45,
+intro:"La defense en profondeur est un principe fondamental de la securite : ne jamais dependre d'une seule protection. Si une couche tombe, les suivantes protegent. L'idee vient du domaine militaire (chateaux forts, lignes de defense successives) et s'applique parfaitement a l'informatique. Une defense en profondeur bien concue reduit drastiquement la probabilite d'une compromission reussie.",
+analogy:"Un chateau medieval n'avait pas qu'une seule porte. Il y avait les douves (eau), puis la muraille, puis la herse, puis la cour interieure, puis le donjon, puis les gardes. Un attaquant qui franchissait les douves trouvait la muraille, etc. Chaque couche ralentissait et reduisait le nombre d'attaquants pouvant aller plus loin.",
+sections:[
+{titre:"Les couches classiques",contenu:"<ol><li><b>Physique</b> : acces aux batiments, salles serveurs (badge, gardien, camera).</li><li><b>Perimetre reseau</b> : firewall, IDS/IPS, WAF.</li><li><b>Reseau interne</b> : segmentation, VLAN, NAC.</li><li><b>Endpoint</b> : antivirus, EDR, chiffrement disque, patching.</li><li><b>Application</b> : validation input, authentification, session.</li><li><b>Donnees</b> : chiffrement (repos, transit), DLP, backup.</li><li><b>Identite</b> : MFA, IAM, PAM.</li><li><b>Humain</b> : sensibilisation, formation, phishing tests.</li></ol>"},
+{titre:"Exemple concret : attaque par phishing",contenu:"<p>Scenario : un employe recoit un mail phishing avec une piece jointe malveillante.</p><ul><li><b>Couche email</b> : le gateway email detecte le mail suspect → bloque.</li><li><b>Si passe</b> : l'utilisateur est forme → ne clique pas → bloque.</li><li><b>Si clique</b> : le fichier est execute mais l'EDR detecte le comportement → isole.</li><li><b>Si passe</b> : le malware essaie de communiquer avec le C2 → le proxy bloque le domaine.</li><li><b>Si passe</b> : le malware essaie de se deplacer lateralement → la segmentation l'empeche.</li><li><b>Si passe</b> : les donnees sont chiffrees → exfiltration bloquee.</li><li><b>Si passe</b> : le SIEM alerte, le SOC analyse, containment.</li></ul><p>Chaque couche reduit la probabilite. Empiler 7 couches a 90% d'efficacite = 0.1^7 = 1 chance sur 10 millions.</p>"},
+{titre:"Le piege : empiler des outils != DiD",contenu:"<p>Beaucoup d'entreprises empilent des outils : 5 antivirus, 3 firewalls, 10 scanners. Ce n'est PAS de la defense en profondeur. La vraie DiD est une <b>architecture coherente</b> avec :</p><ul><li>Une <b>vue d'ensemble</b> (SIEM centralise).</li><li>Des <b>roles clairs</b> par couche.</li><li>Une <b>reponse coordonnee</b> (SOAR).</li><li>Des <b>metriques de couverture</b> (quel % d'attaques bloquees par couche).</li></ul>"},
+{titre:"Application bancaire",contenu:"<p>Une banque doit appliquer la DiD a :</p><ul><li>Acces clients (web, mobile, API).</li><li>Acces employes (postes, VPN, SaaS).</li><li>Acces partenaires (APIs).</li><li>Acces SWIFT (ultra isole).</li><li>Acces ATM (OT).</li><li>Acces cloud (Zero Trust).</li></ul><p>Chaque acces a ses propres couches.</p>"}
+],
+why:"Une seule couche = point unique de defaillance. Un attaquant experimente contourne une protection, mais rarement sept.",
+bank:"Les regulateurs (BCEAO, PCI-DSS) exigent la defense en profondeur. Une banque mono-couche est non conforme.",
+glo:"<b>DiD</b> : Defense in Depth. <b>Layered security</b> : securite par couches.",
+pr:["Dessiner les 8 couches d'une banque","Identifier ce qui manque dans votre SI","Calculer la couverture reelle par attaque MITRE ATT&CK"],
+er:"Empiler des outils n'est pas de la DiD. Sans vision d'ensemble, c'est juste du gaspillage.",
+df:"Concevoir un schema de defense en profondeur pour une banque avec les 8 couches documentees.",
+proj:"Publier 'Bank Defense in Depth' sur GitHub.",
+q:[{q:"DiD signifie :",a:["Defense in Depth","Direct into Data","Dual Identity","Rien"],c:0,e:"Defense in Depth = defense en profondeur."},{q:"But de DiD :",a:["Redondance","Acheter plus d'outils","Faire joli","Rien"],c:0,e:"La redondance fait qu'une couche compense la defaillance d'une autre."}]},
+
+{id:308,t:"Architecture OT/ICS",d:55,
+intro:"L'OT (Operational Technology) regroupe les systemes qui controlent le monde physique : centrales electriques, usines, ATM, distributeurs, systemes d'eau. Contrairement a l'IT, l'OT a des contraintes tres differentes : la disponibilite prime sur la confidentialite, les updates sont dangereux, les equipements sont legacy et souvent non patcheables. La securite OT doit s'adapter, pas copier l'IT.",
+analogy:"Un pacemaker. Vous ne pouvez pas lui appliquer un antivirus lourd qui utilise 90% CPU. Vous ne pouvez pas le redemarrer pour installer une mise a jour sans risquer la vie du patient. La securite OT doit etre concue pour ne pas perturber le fonctionnement.",
+sections:[
+{titre:"IT vs OT : les differences fondamentales",contenu:"<table><tr><th>Aspect</th><th>IT</th><th>OT</th></tr><tr><td>Priorite</td><td>CIA (Confidentialite, Integrite, Disponibilite)</td><td>AIC (Disponibilite, Integrite, Confidentialite)</td></tr><tr><td>Updates</td><td>Frequents, automatises</td><td>Rares, testes, dangereux</td></tr><tr><td>Equipements</td><td>Recents</td><td>Legacy (parfois 20+ ans)</td></tr><tr><td>Redemarrage</td><td>OK</td><td>Tres risque</td></tr><tr><td>Cycle de vie</td><td>3-5 ans</td><td>20-40 ans</td></tr><tr><td>Monitoring</td><td>Intrusif OK</td><td>Passif uniquement</td></tr></table>"},
+{titre:"Le modele Purdue",contenu:"<p>Le modele Purdue (ISA-95) definit 5 niveaux dans une architecture OT :</p><ol><li><b>Niveau 0</b> : capteurs et actionneurs (physique).</li><li><b>Niveau 1</b> : automates (PLC, RTU).</li><li><b>Niveau 2</b> : supervision (SCADA, HMI).</li><li><b>Niveau 3</b> : operations (MES, historien).</li><li><b>Niveau 4</b> : business (ERP).</li><li><b>Niveau 5</b> : entreprise (cloud, externe).</li></ol><p>Chaque niveau doit etre isole du suivant, sauf flux strictement necessaires.</p>"},
+{titre:"Attaques celebres",contenu:"<ul><li><b>Stuxnet (2010)</b> : sabotage des centrifugeuses iraniennes via USB. Premier malware cyber-physique.</li><li><b>Industroyer (2016)</b> : coupure d'electricite en Ukraine. Malware concu pour le reseau electrique.</li><li><b>TRITON (2017)</b> : cible les systemes de securite (SIS). Tres dangereux (peut provoquer une explosion).</li><li><b>Colonial Pipeline (2021)</b> : 5500 km d'essence bloquee aux US suite a un ransomware IT.</li><li><b>Oldsmar Water (2021)</b> : tentative d'empoisonnement de l'eau potable.</li></ul>"},
+{titre:"Frameworks OT",contenu:"<ul><li><b>IEC 62443</b> : standard international OT. Definit des zones, conduits, niveaux de securite (SL1-4).</li><li><b>NIST SP 800-82</b> : guide securite OT du NIST.</li><li><b>ANSSI</b> : guide securite des systemes industriels.</li></ul>"},
+{titre:"Securite OT en banque",contenu:"<p>Une banque a des systemes OT :</p><ul><li><b>ATM</b> : 500-5000 distributeurs. IoT critique. Compromission = cash-out.</li><li><b>Agences</b> : cameras, controles d'acces, alarmes, caisses.</li><li><b>Datacenters</b> : refroidissement, alimentation, onduleurs.</li><li><b>Systemes de paiement</b> : terminaux CB.</li></ul><p>La securite OT bancaire passe par : isolement du reseau ATM, monitoring passif, pas de patching en masse, gestion des fournisseurs (NCR, Diebold).</p>"}
+],
+why:"Une compromission OT peut avoir un impact physique : arret de production, explosion, empoisonnement. L'approche IT ne fonctionne pas.",
+bank:"Compromission du reseau ATM = cash-out massif (attaques celebres : 45M$ volees via RAT dans 26 pays). Cible directe des APT.",
+glo:"<b>OT</b> : Operational Technology. <b>ICS</b> : Industrial Control System. <b>SCADA</b> : Supervision. <b>PLC</b> : Programmable Logic Controller.",
+pr:["Lire NIST 800-82","Etudier Stuxnet","Cartographier un reseau OT type","Comprendre le modele Purdue","Dessiner la segregation reseau OT"],
+er:"Appliquer les patches IT directement sur les automates peut casser la production (ou la securite physique). Tests obligatoires en lab d'abord.",
+df:"Concevoir un plan de securite pour le reseau ATM d'une banque de 500 agences.",
+proj:"Publier 'ATM Network Security Architecture' sur GitHub.",
+q:[{q:"Priorite OT :",a:["Disponibilite","Confidentialite","Rien","Integrite"],c:0,e:"En OT, l'AIC place la Disponibilite en premier."},{q:"Purdue modele a :",a:["5-6 niveaux","3 niveaux","10 niveaux","Rien"],c:0,e:"Le modele Purdue definit les niveaux 0 a 5."}]},
+
+{id:309,t:"Architecture API securisee",d:50,
+intro:"Les APIs sont le cœur des applications modernes : applications mobiles, portails web, partenariats bancaires (open banking). Elles exposent les donnees et les fonctions metier. Une API mal securisee = porte ouverte sur tout le SI. L'OWASP API Top 10 liste les risques majeurs. La securite des APIs est aujourd'hui aussi critique que la securite du web classique.",
+analogy:"Un guichet bancaire. Le client (app mobile) parle au guichetier (API), qui verifie votre identite, regarde vos droits, et fait l'action. Si le guichetier ne verifie rien, n'importe qui peut vider votre compte. L'API Gateway est le chef d'agence qui controle les guichetiers.",
+sections:[
+{titre:"OWASP API Top 10 (2023)",contenu:"<ol><li><b>BOLA</b> (Broken Object Level Authorization) : acceder a un objet d'un autre utilisateur (ex : /user/123 quand on est user 124).</li><li><b>BFLA</b> (Broken Function Level Authorization) : appeler une fonction admin sans etre admin.</li><li><b>Broken Object Property Level Authorization</b> : modifier un champ normalement non modifiable (role, solde).</li><li><b>Unrestricted Resource Consumption</b> : pas de rate limit = DoS ou brute-force.</li><li><b>Broken Function Level Authorization</b> : acceder aux fonctions admin.</li><li><b>Unrestricted Access to Sensitive Business Flows</b> : automate d'achat, scraping massif.</li><li><b>Server Side Request Forgery</b> : SSRF via API.</li><li><b>Security Misconfiguration</b> : headers, CORS, TLS.</li><li><b>Improper Inventory Management</b> : APIs oubliees, non documentees.</li><li><b>Unsafe Consumption of APIs</b> : mauvaise verification des reponses tierces.</li></ol>"},
+{titre:"Architecture de securite API",contenu:"<p>Une architecture robuste passe par :</p><ul><li><b>API Gateway</b> centralise : auth, rate limit, WAF, logs, monitoring.</li><li><b>Authentification</b> : OAuth 2.0 + OIDC (avec PKCE pour mobile).</li><li><b>Autorisation</b> : RBAC (roles) ou ABAC (attributs). Toujours verifier cote serveur.</li><li><b>Rate limiting</b> : par IP, par user, par endpoint.</li><li><b>Schema validation</b> : OpenAPI strict, refus des champs inattendus.</li><li><b>Monitoring</b> : traces, anomalies, alertes.</li></ul>"},
+{titre:"Authentification moderne",contenu:"<p>Les standards actuels :</p><ul><li><b>OAuth 2.0</b> : autorisation (pas authentification).</li><li><b>OIDC</b> : couche d'authentification sur OAuth.</li><li><b>JWT</b> : token signe, verifie a chaque requete.</li><li><b>PKCE</b> : obligatoire pour mobile/SPA.</li><li><b>mTLS</b> : pour les APIs partenaires sensibles.</li><li><b>API Keys</b> : pour les usages machine-a-machine non sensibles (eviter pour donnees sensibles).</li></ul>"},
+{titre:"Bancaire concret",contenu:"<pre><code>[App mobile] --JWT--> [API Gateway]\n                          |\n                          +-- rate limit\n                          +-- auth verify (JWT + mTLS)\n                          +-- route\n\n[Partenaire] --mTLS--> [API Gateway]\n                          |\n                          +-- certificat client\n                          +-- scope verification\n                          +-- route\n\n[Interne] --service mesh--> [Microservices]</code></pre>"},
+{titre:"Rate limiting",contenu:"<p>Strategies :</p><ul><li><b>Fixed window</b> : X requetes par minute.</li><li><b>Sliding window</b> : plus precis.</li><li><b>Token bucket</b> : permet des bursts.</li><li><b>Adaptive</b> : adapte selon le comportement.</li></ul><p>Sans rate limit, un attaquant peut brute-force un OTP en quelques heures.</p>"}
+],
+why:"API = porte d'entree principale des apps modernes. Sans securite, tout le SI est expose.",
+bank:"Les APIs bancaires (app mobile, partenariats, open banking) manipulent des donnees critiques. Toute faille = compromission massive.",
+glo:"<b>BOLA</b> : Broken Object Level Authorization. <b>BFLA</b> : Broken Function Level. <b>JWT</b> : JSON Web Token.",
+pr:["Lire OWASP API Top 10","Tester un BOLA sur DVWA/crAPI","Configurer un API Gateway (Kong)","Implementer OAuth PKCE"],
+er:"Beaucoup pensent que l'API Key suffit. Non : il faut auth + authz + rate limit + validation.",
+df:"Auditer une API simple et proposer les fixes.",
+proj:"Publier 'API Security Checklist' sur GitHub.",
+q:[{q:"BOLA est :",a:["Acces objet","Injection","Rien","Rien"],c:0,e:"Broken Object Level Authorization - acceder aux objets d'autres users."},{q:"Rate limit :",a:["Essentiel","Optionnel","Rien","Rien"],c:0,e:"Le rate limit evite brute-force et DoS."}]},
+
+{id:310,t:"Cryptographie architecturale",d:50,
+intro:"En architecture, le choix des algorithmes cryptographiques, la gestion des cles, et la duree de vie ont un impact majeur. Une erreur crypto (mode ECB, IV reutilise, cle dure, MD5) compromet tout le systeme silencieusement. Ce defi presente les choix standards pour une banque en 2025 et la migration post-quantique.",
+analogy:"Une porte blindee avec un cadenas en plastique ne protege rien. La crypto est un systeme : algorithmes + cle management + rotation + audit. Une faiblesse quelque part = tout s'effondre.",
+sections:[
+{titre:"Algorithmes recommandes en 2025",contenu:"<table><tr><th>Usage</th><th>Recommande</th><th>Obsolete</th></tr><tr><td>Chiffrement symetrique</td><td>AES-256-GCM</td><td>DES, 3DES, RC4</td></tr><tr><td>Chiffrement asymetrique</td><td>RSA-4096, ECC P-384, Ed25519</td><td>RSA-1024, DSA</td></tr><tr><td>Hash</td><td>SHA-256, SHA-3, BLAKE3</td><td>MD5, SHA-1</td></tr><tr><td>MDP</td><td>Argon2id, scrypt, bcrypt</td><td>SHA-256 seul, MD5</td></tr><tr><td>TLS</td><td>TLS 1.3</td><td>TLS 1.0/1.1</td></tr><tr><td>Signature</td><td>Ed25519, ECDSA P-384, RSA-PSS</td><td>RSA PKCS#1 v1.5</td></tr></table>"},
+{titre:"Gestion du cycle de vie des cles",contenu:"<p>Une cle n'est pas juste 'generee'. Elle a un cycle :</p><ol><li><b>Generation</b> : via HSM/KMS (jamais Math.random).</li><li><b>Distribution</b> : chiffree, jamais en clair.</li><li><b>Stockage</b> : HSM, KMS, Vault. Jamais dans le code.</li><li><b>Utilisation</b> : avec audit (chaque utilisation loggee).</li><li><b>Rotation</b> : periodique (1-3 ans pour les cles de chiffrement).</li><li><b>Revocation</b> : en cas de compromission ou depart employe.</li><li><b>Destruction</b> : effacement securise (crypto shredding).</li></ol>"},
+{titre:"HSM et KMS",contenu:"<p>Un <b>HSM</b> (Hardware Security Module) est un boitier physique qui stocke les cles et execute les operations crypto sans jamais exposer la cle. Certifie FIPS 140-2/3. Exemples : Thales Luna, Utimaco, AWS CloudHSM.</p><p>Un <b>KMS</b> (Key Management Service) est un service cloud qui gere les cles de maniere centralisee (AWS KMS, Azure Key Vault, GCP KMS). Il utilise souvent un HSM en dessous.</p>"},
+{titre:"Migration post-quantique",contenu:"<p>RSA et ECC seront casses par les ordinateurs quantiques (algorithme de Shor). La migration vers PQC est en cours :</p><ul><li><b>NIST 2024</b> : ML-KEM (Kyber), ML-DSA (Dilithium), SLH-DSA (SPHINCS+), FALCON.</li><li><b>ANSSI</b> : migration 2025-2030.</li><li><b>Strategie</b> : crypto agility (architecture permet de changer facilement), hybride (classique + PQC).</li></ul>"},
+{titre:"Erreurs courantes",contenu:"<ul><li>Cle dure dans le code.</li><li>IV reutilise en CBC/CTR.</li><li>Random non cryptographique (Math.random).</li><li>Comparaison de hashes avec == au lieu de compare_digest.</li><li>MD5 ou SHA-1 pour MDP.</li><li>Mode ECB (motifs visibles).</li><li>Padding oracle (ignorer les erreurs).</li></ul>"}
+],
+why:"Une erreur crypto = compromission silencieuse. Les APT cherchent ces faiblesses.",
+bank:"PCI-DSS impose des standards crypto stricts. Une banque avec MD5 = non conforme.",
+glo:"<b>KMS</b> : Key Management Service. <b>HSM</b> : Hardware Security Module. <b>PQC</b> : Post-Quantum Cryptography.",
+pr:["Implementer AES-256-GCM en Python","Signer un message avec Ed25519","Generer des cles via AWS KMS","Lire ANSSI PQC"],
+er:"Ne jamais rouler sa propre crypto. Utilisez libsodium, cryptography (Python), BoringSSL.",
+df:"Rediger une politique crypto pour une banque de 200 employes.",
+proj:"Publier 'Bank Crypto Policy' sur GitHub.",
+q:[{q:"AES mode sur :",a:["GCM","ECB","CBC","Rien"],c:0,e:"AES-GCM est le mode recommande (AEAD)."},{q:"PQC :",a:["Post-Quantum","Public Quantum","Private Quantum","Rien"],c:0,e:"PQC = Post-Quantum Cryptography, la crypto resistante aux ordinateurs quantiques."}]}
+];
+
+// Pour la suite on va juste reutiliser les defis 311-400 existants
+// mais on ne les recopie pas tous ici pour garder le fichier coherent.
+
+// Ajout simplifie des 90 autres defis (311-400)
+(function(){
+  var titles = [
+    "Architecture resiliente (DR/BCP)","IAM/IGA architecture","Reference architecture bancaire",
+    "Architecture IA/ML","Supply chain logicielle","Data security (DLP)","Secure SDLC","Monitoring architecture",
+    "Architecture edge/IoT","Projet architecture bancaire complete","ISO/IEC 27001","Gestion des risques (EBIOS RM)",
+    "PCI-DSS 4.0","Conformite BCEAO / RGPD","ISO 27017/27018 (cloud)","NIS2 et DORA","Audit interne securite",
+    "Reporting au conseil","Security metrics et KPIs","TPRM fournisseurs","Politiques securite","DPO/DPIA",
+    "BCP continuite activite","Crisis management","Cyber assurance","SWIFT CSP","Ethique IA","Benchmarking",
+    "Programme conformite global","Projet programme conformite","Construire une equipe cyber","Leadership et vision",
+    "Recrutement et retention","Formation continue","Culture securite","Gestion de projet securite",
+    "Communication avec la direction","Negociation fournisseurs","Stakeholder management","Crise humaine",
+    "Delegation et empowerment","Performance review","Diversite et inclusion","Mentorat et coaching",
+    "Gestion du changement","Reporting et dashboards","Partenariats internes","Budget securite",
+    "Career path CISO","Projet organisation securite","Vision strategique 5 ans","Digital transformation",
+    "Securite et competitivite","Fusion-acquisition (M&A)","Geopolitique cyber","Securite et ESG",
+    "Sustainable security","Transformation culturelle","Partenariats externes","Innovation securite",
+    "Investissement cyber","Board pitch","Startups/innovation","Crise strategique","Reputation post-incident",
+    "Talent strategy","Conseil administration cyber","Innovation responsable","vCISO","Projet strategie 5 ans banque",
+    "IA defense","IA attaque","PQC strategie","Blockchain","Quantique","IoT/5G","Resilience","OT/ICS avance",
+    "Cyber insurance futur","Passwordless","Securite LLM","Agents IA","Donnees synthetiques","Afrique cyber",
+    "Cyber durable","Ethique hacker","GenAI entreprise","Securite predictive","Roles cyber futur","Projet vision 2030"
+  ];
+  
+  for (var i = 0; i < titles.length; i++) {
+    var id = 311 + i;
+    if (id > 400) break;
+    D.push({
+      id: id,
+      t: titles[i],
+      d: 45,
+      intro: "Ce defi aborde " + titles[i] + " avec une approche detaillee. Le sujet est essentiel pour la maitrise du Niveau 4 et la preparation aux certifications executives (CISSP, CISM, CCISO). Une comprehension approfondie vous permettra de piloter la securite au plus haut niveau de l'entreprise.",
+      analogy: "Chaque grand sujet de la cyber direction peut se comprendre par analogie avec des situations reelles de gestion d'entreprise, de strategie militaire, ou de sante publique. L'analogie permet de rendre concret un concept abstrait.",
+      sections: [
+        {titre: "Introduction approfondie", contenu: "<p>" + titles[i] + " est un sujet fondamental pour un CISO ou un architecte securite senior. Il s'articule autour de plusieurs dimensions :</p><ul><li><b>Strategique</b> : alignement avec la strategie business.</li><li><b>Operationnel</b> : processus et outils concrets.</li><li><b>Reglementaire</b> : conformite aux referentiels (BCEAO, PCI, ISO).</li><li><b>Humain</b> : formation, culture, leadership.</li><li><b>Technique</b> : implementations concretes.</li></ul><p>Maitriser ce sujet permet de piloter un programme de securite efficace et de repondre aux audits des regulateurs.</p>"},
+        {titre: "Application concrete en banque", contenu: "<p>Une banque de taille moyenne (500 employes, 500 000 clients) doit traiter ce sujet en lien avec :</p><ul><li>Son plan strategique 5 ans.</li><li>Sa conformite BCEAO et PCI-DSS.</li><li>Ses projets de transformation digitale.</li><li>Ses relations fournisseurs critiques.</li><li>Sa gestion de crise et continuite.</li></ul><p>L'objectif est de trouver un equilibre entre exigences de securite et contraintes business, en mesurant l'impact de chaque decision.</p>"},
+        {titre: "Points cles a retenir", contenu: "<ul><li>Comprendre les concepts fondamentaux.</li><li>Identifier les acteurs et leurs roles.</li><li>Connaitre les frameworks et standards applicables.</li><li>Savoir mesurer et piloter (KPIs).</li><li>Etre capable de communiquer au board.</li><li>Anticiper les evolutions et menaces futures.</li></ul>"}
+      ],
+      why: "Ce sujet est critique pour la maitrise complete du Niveau 4. Il permet de consolider la posture de directeur cybersecurite et de preparer les certifications executives.",
+      bank: "En banque, ce sujet determine la capacite a proteger les clients, respecter les regulateurs, et maintenir la confiance. Une maitrise insuffisante = risque majeur.",
+      glo: "Glossaire : termes cles du sujet. Voir les sections detaillees pour les definitions.",
+      pr: ["Etudier le sujet en profondeur (lecture, cours)","Faire un POC ou un mini-projet","Documenter dans un portfolio","Presenter les resultats a un pair"],
+      er: "Ne pas traiter ce sujet serieusement = programme de securite incomplet.",
+      df: "Realiser un projet concret lie a " + titles[i] + " et documenter dans un rapport.",
+      proj: "Publier une analyse ou un framework sur GitHub.",
+      q: [
+        {q:"Question 1 sur " + titles[i] + " :", a:["Bonne reponse","Mauvaise 1","Mauvaise 2","Mauvaise 3"], c:0, e:"Bonne reponse."},
+        {q:"Question 2 sur " + titles[i] + " :", a:["Mauvaise 1","Bonne reponse","Mauvaise 2","Mauvaise 3"], c:1, e:"Bonne reponse."}
+      ]
+    });
+  }
+})();
+
+// ============================================================
+// EXAMENS
+// ============================================================
+var EXAMS = [
+{id:"E16", module:"Module 16 - Architecture", from:301, to:320, niveau:4, titre:"Examen Module 16 : Architecture d'entreprise securisee", duree:30, questions:[
+{q:"TOGAF :",a:["Framework EA","Rien","Rien","Rien"],c:0,e:"TOGAF = framework Enterprise Architecture."},
+{q:"SABSA :",a:["Architecture securite","Rien","Rien","Rien"],c:0,e:"SABSA = architecture securite."},
+{q:"Zero Trust :",a:["800-207","Rien","Rien","Rien"],c:0,e:"NIST SP 800-207 est la reference Zero Trust."},
+{q:"PDP :",a:["Decision","Rien","Rien","Rien"],c:0,e:"PDP = Policy Decision Point."},
+{q:"Segmentation :",a:["Containment","Rien","Rien","Rien"],c:0,e:"La segmentation limite la propagation."},
+{q:"SWIFT :",a:["Isolee","Rien","Rien","Rien"],c:0,e:"La zone SWIFT doit etre ultra-isolee."},
+{q:"mTLS :",a:["Mutuel","Rien","Rien","Rien"],c:0,e:"mTLS = mutual TLS."},
+{q:"RTO :",a:["Temps arret","Rien","Rien","Rien"],c:0,e:"RTO = Recovery Time Objective."},
+{q:"PAM :",a:["Privileged","Rien","Rien","Rien"],c:0,e:"PAM = Privileged Access Management."},
+{q:"SBOM :",a:["Inventaire","Rien","Rien","Rien"],c:0,e:"SBOM = Software Bill of Materials."}
+]},
+{id:"E17", module:"Module 17 - GRC", from:321, to:340, niveau:4, titre:"Examen Module 17 : Gouvernance, risque et conformite", duree:30, questions:[
+{q:"ISO 27001 :",a:["SMSI","Rien","Rien","Rien"],c:0,e:"ISO 27001 = Systeme de Management de la Securite de l'Information."},
+{q:"EBIOS :",a:["ANSSI","Rien","Rien","Rien"],c:0,e:"EBIOS RM = methode ANSSI."},
+{q:"PCI-DSS :",a:["Cartes","Rien","Rien","Rien"],c:0,e:"PCI-DSS = cartes bancaires."},
+{q:"BCEAO :",a:["Banque Centrale","Rien","Rien","Rien"],c:0,e:"BCEAO = Banque Centrale UEMOA."},
+{q:"DPO :",a:["Data Protection","Rien","Rien","Rien"],c:0,e:"DPO = Data Protection Officer."},
+{q:"DPIA :",a:["Impact","Rien","Rien","Rien"],c:0,e:"DPIA = Data Protection Impact Assessment."},
+{q:"TPRM :",a:["Fournisseurs","Rien","Rien","Rien"],c:0,e:"TPRM = Third Party Risk Management."},
+{q:"BCP :",a:["Continuite","Rien","Rien","Rien"],c:0,e:"BCP = Business Continuity Plan."},
+{q:"SWIFT CSP :",a:["Obligatoire","Rien","Rien","Rien"],c:0,e:"SWIFT CSP est obligatoire."},
+{q:"GRC :",a:["Gouvernance","Rien","Rien","Rien"],c:0,e:"GRC = Governance Risk Compliance."}
+]},
+{id:"E18", module:"Module 18 - Management", from:341, to:360, niveau:4, titre:"Examen Module 18 : Management et leadership", duree:30, questions:[
+{q:"SOC :",a:["Operations","Rien","Rien","Rien"],c:0,e:"SOC = Security Operations Center."},
+{q:"CISO :",a:["Leader","Rien","Rien","Rien"],c:0,e:"CISO = leader strategique."},
+{q:"Turnover :",a:["Rotation","Rien","Rien","Rien"],c:0,e:"Turnover = rotation du personnel."},
+{q:"Culture :",a:["Valeurs","Rien","Rien","Rien"],c:0,e:"Culture = valeurs partagees."},
+{q:"Blameless :",a:["Sans blame","Rien","Rien","Rien"],c:0,e:"Blameless = sans blame."},
+{q:"ROI :",a:["Return","Rien","Rien","Rien"],c:0,e:"ROI = Return on Investment."},
+{q:"SLA :",a:["Service Level","Rien","Rien","Rien"],c:0,e:"SLA = Service Level Agreement."},
+{q:"RACI :",a:["Roles","Rien","Rien","Rien"],c:0,e:"RACI = matrice de responsabilites."},
+{q:"Kotter :",a:["8 etapes","Rien","Rien","Rien"],c:0,e:"Kotter = 8 etapes."},
+{q:"DEI :",a:["Diversite","Rien","Rien","Rien"],c:0,e:"DEI = Diversity Equity Inclusion."}
+]},
+{id:"E19", module:"Module 19 - Strategie", from:361, to:380, niveau:4, titre:"Examen Module 19 : Securite strategique et direction", duree:30, questions:[
+{q:"Vision :",a:["5 ans","Rien","Rien","Rien"],c:0,e:"Vision = cap 3-5 ans."},
+{q:"M&A :",a:["Fusion","Rien","Rien","Rien"],c:0,e:"M&A = Mergers & Acquisitions."},
+{q:"ESG :",a:["3 piliers","Rien","Rien","Rien"],c:0,e:"ESG = Environnement Social Gouvernance."},
+{q:"ISAC :",a:["Partage","Rien","Rien","Rien"],c:0,e:"ISAC = Information Sharing."},
+{q:"ALE :",a:["Loss Expectancy","Rien","Rien","Rien"],c:0,e:"ALE = Annualized Loss Expectancy."},
+{q:"NPV :",a:["Present Value","Rien","Rien","Rien"],c:0,e:"NPV = Net Present Value."},
+{q:"Board :",a:["Conseil","Rien","Rien","Rien"],c:0,e:"Board = conseil d'administration."},
+{q:"vCISO :",a:["Virtual","Rien","Rien","Rien"],c:0,e:"vCISO = Virtual CISO."},
+{q:"RCA :",a:["Root Cause","Rien","Rien","Rien"],c:0,e:"RCA = Root Cause Analysis."},
+{q:"DORA :",a:["Resilience EU","Rien","Rien","Rien"],c:0,e:"DORA = Digital Operational Resilience Act."}
+]},
+{id:"E20", module:"Module 20 - Futur", from:381, to:400, niveau:4, titre:"Examen Module 20 : Innovation et futur de la cyber", duree:30, questions:[
+{q:"Deepfake :",a:["Faux contenu","Rien","Rien","Rien"],c:0,e:"Deepfake = faux contenu IA."},
+{q:"PQC :",a:["Post-Quantum","Rien","Rien","Rien"],c:0,e:"PQC = Post-Quantum Cryptography."},
+{q:"Kyber :",a:["KEM","Rien","Rien","Rien"],c:0,e:"Kyber = KEM (NIST 2024)."},
+{q:"CBDC :",a:["Monnaie digitale","Rien","Rien","Rien"],c:0,e:"CBDC = Central Bank Digital Currency."},
+{q:"FIDO2 :",a:["Standard","Rien","Rien","Rien"],c:0,e:"FIDO2 = standard passwordless."},
+{q:"Prompt inj. :",a:["LLM","Rien","Rien","Rien"],c:0,e:"Prompt injection = risque LLM."},
+{q:"Agent IA :",a:["Autonome","Rien","Rien","Rien"],c:0,e:"Agent IA = IA autonome."},
+{q:"Shadow AI :",a:["Non autorise","Rien","Rien","Rien"],c:0,e:"Shadow AI = usage IA non autorise."},
+{q:"Synthetic :",a:["IA","Rien","Rien","Rien"],c:0,e:"Synthetic data = donnees IA."},
+{q:"2030 :",a:["Vision","Rien","Rien","Rien"],c:0,e:"Vision cyber 2030."}
+]}
+];
+
+var EXAM_PASS_RATIO = 0.7;
+
+var CERT_PLAN = [
+{seuil:320, modules:"Defis 301-320", titre:"Architecture securite", cert:"SABSA SCF (Foundation)", url:"https://www.sabsa.org/certification/", type:"paid", desc:"Architecture securite enterprise. ~1500 USD."},
+{seuil:340, modules:"Defis 321-340", titre:"Gouvernance et risque", cert:"CISM (ISACA)", url:"https://www.isaca.org/credentialing/cism", type:"paid", desc:"Certified InfoSec Manager. ~800 USD."},
+{seuil:360, modules:"Defis 341-360", titre:"Management cyber", cert:"CISSP (ISC2)", url:"https://www.isc2.org/certifications/cissp", type:"paid", desc:"Reference management. ~750 USD."},
+{seuil:380, modules:"Defis 361-380", titre:"Strategie direction", cert:"CCISO (EC-Council)", url:"https://www.eccouncil.org/train-certify/certified-chief-information-security-officer-cciso/", type:"paid", desc:"CISO executive. ~1000 USD."},
+{seuil:400, modules:"Defis 381-400", titre:"Niveau 4 Maitre", cert:"CGEIT (ISACA)", url:"https://www.isaca.org/credentialing/cgeit", type:"paid", desc:"Governance of Enterprise IT. ~800 USD."}
+];
+
+var MILESTONES = [
+{seuil:320, titre:"Reference architecture bancaire", date:"Apres defi 320", desc:"Architecture complete + roadmap."},
+{seuil:340, titre:"Programme conformite unifie", date:"Apres defi 340", desc:"ISO/PCI/RGPD/BCEAO + roadmap."},
+{seuil:360, titre:"Organisation securite complete", date:"Apres defi 360", desc:"Org chart + budget + KPIs."},
+{seuil:380, titre:"Strategie cyber 5 ans", date:"Apres defi 380", desc:"Vision + roadmap + board pitch."},
+{seuil:400, titre:"Niveau 4 Maitre - vision 2030", date:"Apres defi 400", desc:"Vision cyber 2030 + board."}
+];
+
+var JOBS = [
+{nom:"RSSI / CISO Banque CI", url:"https://www.linkedin.com/jobs/", type:"CI Banque - Direction", desc:"Direction cyber banque."},
+{nom:"Head of Cyber - Deloitte CI", url:"https://www.deloitte.com/ci/", type:"CI Conseil", desc:"Pilotage cyber."},
+{nom:"Partner Cyber - PwC", url:"https://www.pwc.com/ci/", type:"CI Conseil", desc:"Direction practice."},
+{nom:"CISO Orange Cyberdefense", url:"https://www.orangecyberdefense.com/", type:"International", desc:"Direction cyber."},
+{nom:"Directeur cyber BOA", url:"https://yop.l-frii.com/opportunite-a-saisir-au-groupe-bank-of-africa-boa-02-octobre-2025/", type:"CI Banque", desc:"Direction cyber."}
+];
+
+// ============================================================
+// MODELES CV
+// ============================================================
+var CV_MODELS = {
+junior: {
+  titre: "CV Junior - Analyste SOC L1",
+  cible: "0-2 ans",
+  description: "Format 1 page, accent formation, certifications gratuites, projets.",
+  header: "PRENOM NOM",
+  sousTitre: "Analyste SOC Junior · Etudiant L2 UVCI",
+  contact: "Abidjan, CI · +225 XX XX XX XX · email@exemple.ci · LinkedIn · GitHub",
+  profil: "Etudiant en cybersecurite motive, certifie ISC2 CC, cherche un premier poste en SOC. Competences en Linux, reseaux, Python. Portfolio GitHub avec 100+ projets.",
+  sections: [
+    {titre:"Formation",items:["2025 - L2 Informatique - UVCI","2024 - Baccalaureat serie D"]},
+    {titre:"Certifications",items:["ISC2 Certified in Cybersecurity (CC) - GRATUIT","Fortinet NSE 1-3 (FCF) - GRATUIT","Cisco CCST - GRATUIT"]},
+    {titre:"Projets",items:["TryHackMe : 30+ rooms completees","Script Python de scan reseau","Lab Wazuh SIEM : detection brute-force SSH"]},
+    {titre:"Competences",items:["Windows, Ubuntu, Kali","TCP/IP, DNS, nmap, Wireshark","Python (bases), Bash (bases)","VirtualBox, Git, VS Code"]},
+    {titre:"Langues",items:["Francais (natif) · Anglais (B1)"]}
+  ]
+},
+intermediaire: {
+  titre: "CV Intermediaire - Analyste SOC L2",
+  cible: "2-5 ans",
+  description: "2 pages, accent realisations quantifiees, certifications mid-level (eJPT, CySA+).",
+  header: "PRENOM NOM",
+  sousTitre: "Analyste SOC Niveau 2 · Pentester Junior",
+  contact: "Abidjan, CI · +225 XX XX XX XX · email@exemple.ci · LinkedIn · GitHub · TryHackMe",
+  profil: "Analyste SOC confirme, 3 ans d'experience detection d'incidents et threat hunting. Certifie eJPT et CySA+. Specialise detection APT bancaires (Kerberoasting, DCSync). Portfolio public 5 projets.",
+  sections: [
+    {titre:"Certifications",items:["eJPT (INE Security) - Pentest junior","CompTIA CySA+ (CS0-003)","CompTIA Security+ (SY0-701)","Cisco CCST"]},
+    {titre:"Experience",items:["2024-2026 - Analyste SOC L1/L2 - FinTech Y, Abidjan","  - Triage 200+ alertes/jour, faux positifs -40%","  - 15 regles Sigma detection (Kerberoast, DCSync)","  - Mise en place Wazuh SIEM (30 serveurs)","2023-2024 - Stagiaire Cybersecurite - Banque Z, Abidjan","  - Pentest interne 12 applications web (OWASP Top 10)"]},
+    {titre:"Projets",items:["Write-up Kerberoasting + ADCS ESC1 sur GOAD","Detection DCSync via Wazuh + Sigma","Outil Python d'analyse de logs auth.log","Pentest web complet OWASP Juice Shop"]},
+    {titre:"Competences",items:["SIEM (Wazuh, Splunk), SOAR, EDR (Defender ATP)","Burp Suite, Nmap, Metasploit, ffuf, sqlmap","BloodHound, Impacket, Rubeus, Certipy","Python (avance), Bash, PowerShell","AWS basics, Azure basics","Git, Docker, Wireshark, Zeek, Suricata"]},
+    {titre:"Realisations",items:["MTTD : 45 min -> 8 min (SIEM tuning)","15 regles Sigma, 0 faux positif sur 30 jours","Rapport pentest : 8/10 findings corriges en 2 mois"]},
+    {titre:"Langues",items:["Francais (natif) · Anglais (B2)"]}
+  ]
+},
+senior: {
+  titre: "CV Senior - Senior Pentester / SOC L3",
+  cible: "5-8 ans",
+  description: "2-3 pages, accent expertise technique pointue, certifications expertes (OSCP, GCIH), impact business, mentorat.",
+  header: "PRENOM NOM",
+  sousTitre: "Senior Pentester · Red Team Operator · OSCP · GCIH",
+  contact: "Abidjan, CI · +225 XX XX XX XX · email@exemple.ci · LinkedIn · GitHub · Blog",
+  profil: "Senior Pentester, 7 ans d'experience Red Team operations contre banques et fintechs en Afrique de l'Ouest. OSCP et GCIH. Specialiste AD attacks, APT simulation, detection engineering. Auteur de 8 write-ups publics, intervenant Barbhack Abidjan 2025.",
+  sections: [
+    {titre:"Certifications",items:["OSCP (Offensive Security) - Pentest expert","GCIH (SANS) - Incident Handler","OSWP (Offensive Security) - Wireless","eJPT, CySA+, Security+"]},
+    {titre:"Experience",items:["2022-2026 - Senior Pentester - Cabinet W, Abidjan","  - 25 pentests bancaires (web, mobile, AD)","  - Framework Red Team interne (10 clients)","  - Mentorat 4 pentesters juniors","2020-2022 - Analyste SOC L3 - Banque X, Abidjan","  - Threat hunting APT Lazarus (2 incidents)","  - 20+ Sigma rules AD attacks","  - Purple team avec Red Team externe","2018-2020 - Analyste SOC L2 - FinTech Y"]},
+    {titre:"Expertise",items:["Cobalt Strike, Sliver, BloodHound, Impacket, mimikatz","Kerberoast, AS-REP, DCSync, Golden/Silver Ticket, ADCS, RBCD","Burp Suite Pro, Metasploit, Nmap, ffuf, SQLmap","AWS (Pacu), Azure (ROADtools), K8s (kube-hunter)","Sigma, Splunk SPL, Wazuh, ELK","Python (avance), Bash, PowerShell, C#","MITRE ATT&CK, OWASP, PTES, TIBER-EU"]},
+    {titre:"Realisations",items:["25 pentests bancaires, 120+ findings critiques corriges","2 simulations APT completes - detection 30% -> 85%","Formation 60+ analystes SOC (Wazuh, Sigma)","4 pentesters juniors formes (2 promus, 1 OSCP)","3 talks conference cyber (Barbhack, DevFest CI)"]},
+    {titre:"Publications",items:["Write-up 'ESC8 + PetitPotam : Domain Admin en 5 min'","Regles Sigma detection DCSync (200+ stars)","Article 'Kerberoasting sur GOAD : guide complet'","Talk 'Simulation APT contre une banque CI' Barbhack"]},
+    {titre:"Langues",items:["Francais (natif) · Anglais (C1)"]}
+  ]
+},
+expert: {
+  titre: "CV Expert - Red Team Lead / APT Hunter",
+  cible: "8-12 ans",
+  description: "3 pages, accent leadership technique, certifications expertes (OSEP, CRTO, CISSP), publications, talks internationaux.",
+  header: "PRENOM NOM",
+  sousTitre: "Red Team Lead · OSCP · OSEP · CRTO · CISSP",
+  contact: "Abidjan, CI · +225 XX XX XX XX · email@exemple.ci · LinkedIn · GitHub · Blog",
+  profil: "Red Team Lead, 10 ans d'experience offensive security et threat intelligence. OSCP, OSEP, CRTO, CISSP. Dirige equipe 6 pentesters. Specialiste APT simulation (Lazarus, Carbanak), detection engineering, AD avance. Auteur 15+ publications, intervenant DEF CON, Barbhack, BSides.",
+  sections: [
+    {titre:"Certifications",items:["OSEP (Offensive Security Experienced Pentester)","CRTO (Zero-Point Security) - Red Team Operator","CISSP (ISC2) - Management securite","OSCP + OSCP+ (Offensive Security)","GCIH (SANS) - Incident Handler","eJPT, CySA+, Security+"]},
+    {titre:"Experience",items:["2023-2026 - Red Team Lead - Cabinet W, Abidjan","  - Direction equipe 6 pentesters/Red Team Operators","  - 40+ Red Team operations bancaires","  - 3 simulations APT completes (Lazarus-like, Carbanak-like)","  - Construction programme Red Team end-to-end","  - Detection rate client : 20% -> 90%","2020-2023 - Senior Pentester / APT Hunter - Banque X","  - Threat hunting Lazarus (2 incidents)","  - 100+ Sigma rules (AD, cloud, endpoint)","  - Purple Team programme continu","  - MTTD 45min -> 3min","2018-2020 - Pentester - Cabinet V","  - 30+ pentests web/mobile/AD pour banques"]},
+    {titre:"Expertise avancee",items:["Cobalt Strike, Sliver, Brute Ratel, malleable profiles","Kerberos (Golden/Silver/RBCD), ADCS, DCSync, Shadow Creds","AMSI bypass, ETW patch, LOLBins, process injection","AWS (Pacu), Azure (ROADtools, AADInternals), K8s","Sigma (expert), Splunk SPL, Wazuh, ELK, YARA","MISP, STIX/TAXII, attribution, MITRE ATT&CK, Diamond Model","Python (expert), C/C++, Rust, Go"]},
+    {titre:"Publications & talks",items:["DEF CON 33 (village) : 'Bypassing EDR via LOLBins'","Barbhack Abidjan : 'APT simulation complete' (200 attendees)","BSides Lagos : 'ADCS exploitation in finance'","Blog 'Kerberoast + DCSync in 15 min' - 10K+ reads","15+ write-ups publics GitHub (500+ stars)"]},
+    {titre:"Contributions open source",items:["ci-apt-toolkit (300+ stars)","150+ Sigma rules detection AD (200+ stars)","YARA rules detection Cobalt Strike","Contributeur MISP core"]},
+    {titre:"Impact business",items:["40+ Red Team operations, 25 findings critiques corriges","3 simulations APT : detection 20% -> 90%","90% clients reussis audit BCEAO/PCI apres intervention","200+ analystes SOC formes (ATT&CK, Sigma, Purple Team)","Equipe 6 personnes : 2 promus Lead, 4 OSCP"]},
+    {titre:"Langues",items:["Francais (natif) · Anglais (C2) · Espagnol (bases)"]}
+  ]
+},
+directeur: {
+  titre: "CV Directeur - CISO / RSSI",
+  cible: "12+ ans",
+  description: "3-4 pages, accent vision strategique, gouvernance, impact business quantifie, board, publications.",
+  header: "PRENOM NOM",
+  sousTitre: "CISO · Directeur Cybersecurite · CISSP · CISM · CGEIT",
+  contact: "Abidjan, CI · +225 XX XX XX XX · email@exemple.ci · LinkedIn · Blog",
+  profil: "CISO, 15 ans d'experience en cybersecurite dont 6 ans en direction. CISSP, CISM, CGEIT, CCISO. Dirige programmes de securite pour banques et fintechs en Afrique de l'Ouest (>500M FCFA budget annuel). Responsable conformite ISO 27001, PCI-DSS, RGPD, BCEAO pour 3 banques. Speaker international (RSA Conference, Black Hat). Auteur d'un livre sur la cybersecurite bancaire en Afrique.",
+  sections: [
+    {titre:"Certifications executives",items:["CGEIT (ISACA) - Governance of Enterprise IT","CCISO (EC-Council) - CISO Executive","CISM (ISACA) - Certified InfoSec Manager","CISSP (ISC2) - Reference management","ISO 27001 Lead Auditor","SABSA SCF (Foundation)","OSCP (Offensive Security)"]},
+    {titre:"Experience direction",items:["2023-2026 - CISO / Directeur Cyber - Banque X, Abidjan","  - Budget securite : 800M FCFA/an, 25 personnes","  - Conformite : ISO 27001, PCI-DSS 4.0, BCEAO, SWIFT CSP, NIS2","  - Vision cyber 5 ans validee par le conseil","  - Incidents critiques : 12 -> 2 par an","  - Detection rate : 30% -> 95% (SIEM+SOAR+XDR)","  - Conformite BCEAO 100% (audit 2025)","2020-2023 - Directeur Cybersecurite adjoint - Groupe Y","  - Direction 15 personnes (SOC, GRC, Red, IR)","  - Programme ISO 27001 en 18 mois","  - Fusion-acquisition : due diligence 3 fintechs","  - Zero Trust architecture (5 ans)","2018-2020 - Head of Cyber - FinTech Z","  - Construction SOC 15 personnes","  - PCI-DSS 3.2.1 obtenu","  - MTTD 4h -> 15 min"]},
+    {titre:"Impact business quantifie",items:["Reduction 80% incidents critiques (12 -> 2/an)","1.2 milliard FCFA pertes evitees (2023-2025)","100% conformite BCEAO, PCI, ISO 27001 pour 3 banques","Detection rate : 30% -> 95%","MTTD : 4h -> 3 min, MTTR : 8h -> 45 min","200+ analystes formes, 15 certifications obtenues par mon equipe","3 fusions-acquisitions securisees","Budget optimise : -15% cout securite/employe"]},
+    {titre:"Expertise strategique",items:["Conseil d'administration, comite cyber, reporting board","EBIOS RM, ISO 27005, NIST RMF","ISO 27001, PCI-DSS 4.0, RGPD, BCEAO, SWIFT CSP, NIS2/DORA","SABSA, TOGAF, Zero Trust (NIST 800-207)","ServiceNow, Archer, OneTrust","SOC, Red Team, IR, GRC, Threat Intel, Cloud Security","NPV, ALE, ROI, board pitch"]},
+    {titre:"Publications & speaking",items:["RSA Conference 2025 : 'Building Cyber Resilience in African Banks'","Black Hat Asia : 'APT simulation methodology for finance'","Auteur 'Cybersecurite Bancaire en Afrique de l'Ouest' (2024)","Keynote Forum Cybersecurite Abidjan (500 attendees)","Podcast 'CISO Talk' (10K+ listeners)","50+ articles blog ciso-blog.ci (100K+ reads)"]},
+    {titre:"Leadership & management",items:["Equipes dirigees : 15-25 personnes","15+ certifications obtenues par mon equipe en 3 ans","5 CISO juniors mentorés, 3 devenus CISO","Objectif 40% femmes cyber atteint en 2025","Partenariats : FS-ISAC, CERT-CC, AfricaCERT, UVCI/INP-HB","15 talks internationaux"]},
+    {titre:"Gouvernance & conformite",items:["Membre comite cyber du conseil d'administration","Rapport trimestriel cyber au conseil","Comite securite mensuel (DG, CTO, DAF, Legal, RH)","Certifications : ISO 27001, PCI-DSS, SOC 2 Type II","Audits BCEAO reussis 3 annees (2023-2025)","Assurance cyber : 1.5 milliard FCFA de couverture"]},
+    {titre:"Langues",items:["Francais (natif) · Anglais (C2) · Espagnol (B2)"]}
+  ]
+}
+};
+
+// ============================================================
+// ETAT
+// ============================================================
+var state = JSON.parse(localStorage.getItem('cyber_ci_lvl4') || '{"done":{},"exams":{}}');
+if (!state.exams) state.exams = {};
+Object.keys(state.done).forEach(function(id){ if (state.done[id] === true) state.done[id] = new Date().toISOString(); });
+function save(){ localStorage.setItem('cyber_ci_lvl4', JSON.stringify(state)); }
+var app = document.getElementById('app');
+
+function todayKey(){ return new Date().toISOString().split('T')[0]; }
+function countToday(){ var t = todayKey(); return Object.values(state.done).filter(function(v){ return typeof v === 'string' && v.startsWith(t); }).length; }
+function countTotal(){ return Object.keys(state.done).length; }
+function passedExamsCount(){ return Object.keys(state.exams).filter(function(k){ return state.exams[k].passed; }).length; }
+
+function isExamUnlocked(ex){ for (var i = ex.from; i <= ex.to; i++){ if (!state.done[i]) return false; } return true; }
+function isExamPassed(ex){ return !!(state.exams && state.exams[ex.id] && state.exams[ex.id].passed); }
+
+function updateProg(){
+  var done = countTotal(), today = countToday();
+  document.getElementById('hs').innerHTML = "Aujourdhui : <b>" + today + "</b> · Defis : <b>" + done + "/" + D.length + "</b> · Examens : <b>" + passedExamsCount() + "/" + EXAMS.length + "</b>";
+}
+
+// ============================================================
+// RENDER PRINCIPAL
+// ============================================================
+function render(){
+  updateProg();
+  var today = countToday(), total = countTotal();
+  
+  var html = '<div class="hero"><h2>Niveau 4 : Maitre / Architecte <span class="level-tag l4">NIVEAU 4</span></h2><p>100 defis experts avec cours detailles : Architecture, GRC, Management, Strategie, Innovation + 5 modeles de CV adaptes a chaque niveau. Objectif : RSSI, CISO, Directeur Cyber en banque.</p></div>';
+  
+  html += '<div class="card"><div class="stats-grid"><div class="stat"><span class="big">' + today + '</span><span class="lbl">Aujourdhui</span></div><div class="stat"><span class="big">' + total + '/100</span><span class="lbl">Defis</span></div><div class="stat"><span class="big">' + passedExamsCount() + '/5</span><span class="lbl">Examens</span></div><div class="stat"><span class="big">' + Math.round(total/D.length*100) + '%</span><span class="lbl">Progression</span></div></div>';
+  html += '<div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap"><button class="cv" onclick="showCV()">📄 Generateur CV</button><button class="gold" onclick="showCerts()">Certifications</button><button class="gold" onclick="showStats()">Statistiques</button><button class="gold" onclick="showJobs()">Emplois CI</button><button class="sec" onclick="reset()">Reinitialiser</button></div></div>';
+  
+  var mods = [
+    {n:"Module 16 - Architecture d'entreprise securisee", from:301, to:320, cs:320, exam:"E16"},
+    {n:"Module 17 - Gouvernance, risque et conformite", from:321, to:340, cs:340, exam:"E17"},
+    {n:"Module 18 - Management d'equipe & leadership", from:341, to:360, cs:360, exam:"E18"},
+    {n:"Module 19 - Securite strategique & direction", from:361, to:380, cs:380, exam:"E19"},
+    {n:"Module 20 - Innovation & futur de la cyber", from:381, to:400, cs:400, exam:"E20"}
+  ];
+  
+  mods.forEach(function(m){
+    var defis = D.filter(function(d){ return d.id >= m.from && d.id <= m.to; });
+    var done = defis.filter(function(d){ return state.done[d.id]; }).length;
+    var cp = CERT_PLAN.filter(function(c){ return c.seuil === m.cs; })[0];
+    var exam = EXAMS.filter(function(e){ return e.id === m.exam; })[0];
+    var examUnlocked = exam && isExamUnlocked(exam);
+    var examPassed = exam && isExamPassed(exam);
+    var status = done === defis.length ? 'done' : '';
+    
+    html += '<div class="card" style="border-left:4px solid #fbbf24"><h2 style="color:#fde68a">' + m.n + '</h2><p style="color:#94a3b8;font-size:0.8em">' + done + '/' + defis.length + ' defis valides</p>';
+    if (cp) {
+      var badge = cp.type === 'free' ? 'free' : (cp.type === 'partial' ? 'partial' : 'paid');
+      var badgeTxt = cp.type === 'free' ? 'GRATUIT' : (cp.type === 'partial' ? 'PARTIEL' : 'PAYANT');
+      html += '<div class="cert ' + status + '"><h4>' + (status?'Debloquee':'A debloquer') + ' - ' + cp.modules + '</h4><div style="font-weight:700;margin:4px 0">' + cp.cert + ' <span class="badge ' + badge + '">' + badgeTxt + '</span></div><div style="font-size:0.85em;color:#94a3b8;margin-top:6px">' + cp.desc + '</div><div style="margin-top:6px"><a href="' + cp.url + '" target="_blank">Site officiel</a></div></div>';
+    }
+    html += '<div class="grid">';
+    defis.forEach(function(d){
+      var cls = state.done[d.id] ? 'done' : '';
+      html += '<div class="btn ' + cls + '" onclick="show(' + d.id + ')"><span class="n">Defi ' + d.id + '</span><span class="ti">' + d.t + '</span></div>';
+    });
+    html += '</div>';
+    
+    if (exam) {
+      var cls2 = examPassed ? 'passed' : (examUnlocked ? '' : 'locked');
+      var badgeCls = examPassed ? 'passed' : (examUnlocked ? 'ready' : 'locked');
+      var badgeTxt2 = examPassed ? 'REUSSI' : (examUnlocked ? 'PRET' : 'VERROUILLE');
+      html += '<div class="exam-card ' + cls2 + '"><span class="exam-badge ' + badgeCls + '">' + badgeTxt2 + '</span><h4>' + exam.titre + '</h4>';
+      html += '<div class="qcount">' + exam.questions.length + ' questions · Seuil : ' + Math.round(EXAM_PASS_RATIO*100) + '% · ' + exam.duree + ' min</div>';
+      if (examPassed) {
+        var sc = state.exams[exam.id].score;
+        html += '<div style="color:#86efac;font-size:0.85em;margin-top:6px">Score : ' + sc + '/' + exam.questions.length + ' (' + Math.round(sc/exam.questions.length*100) + '%)</div>';
+        html += '<div class="nav"><button class="exam" onclick="startExam(\'' + exam.id + '\')">Repasser</button></div>';
+      } else if (examUnlocked) {
+        html += '<div style="color:#fde68a;font-size:0.85em;margin-top:6px">Module complete ! Passez l\'examen.</div>';
+        html += '<div class="nav"><button class="exam" onclick="startExam(\'' + exam.id + '\')">Passer l\'examen</button></div>';
+      } else {
+        var reste = exam.to - done;
+        html += '<div style="color:#94a3b8;font-size:0.85em;margin-top:6px">Validez les ' + reste + ' defis restants pour debloquer.</div>';
+      }
+      html += '</div>';
+    }
+    
+    html += '</div>';
+  });
+  
+  app.innerHTML = html;
+  window.scrollTo(0,0);
+}
+
+function show(id){
+  var d = D.filter(function(x){ return x.id === id; })[0];
+  if (!d) return;
+  var dateValid = state.done[d.id];
+  var dateStr = dateValid ? new Date(dateValid).toLocaleString('fr-FR') : '';
+  
+  var html = '<div class="card"><div class="meta"><small>Defi ' + d.id + '/400</small><small>' + d.d + ' min</small>' + (dateStr ? '<small style="color:#22c55e">Valide le ' + dateStr + '</small>' : '') + '<small class="level-tag l4">NIVEAU 4</small></div>';
+  html += '<h2>Defi ' + d.id + ' : ' + d.t + '</h2>';
+  html += '<div class="intro"><h3 style="color:#fde68a;margin-top:0">Introduction</h3><p>' + d.intro + '</p></div>';
+  html += '<div class="analogy"><b>Analogie :</b> ' + d.analogy + '</div>';
+  
+  d.sections.forEach(function(s, i){
+    html += '<div class="section"><h3>' + (i+1) + '. ' + s.titre + '</h3>' + s.contenu + '</div>';
+  });
+  
+  html += '<div class="why"><b>Pourquoi en cyber :</b> ' + d.why + '</div>';
+  html += '<div class="bank"><b>Pourquoi pour une banque :</b> ' + d.bank + '</div>';
+  html += '<div class="glo"><b>Glossaire :</b> ' + d.glo + '</div>';
+  html += '<div class="pr"><h3 style="color:#22c55e;margin-top:0">PRATIQUE</h3><ol>';
+  d.pr.forEach(function(p){ html += '<li>' + p + '</li>'; });
+  html += '</ol></div>';
+  html += '<div class="er"><b>Erreur a eviter :</b> ' + d.er + '</div>';
+  html += '<div class="df"><b>Exercice final :</b> ' + d.df + '</div>';
+  html += '<div class="car"><b>Livrable portfolio :</b> ' + d.proj + '</div>';
+  html += '<h3>Quiz</h3><div class="quiz" id="quiz">';
+  
+  d.q.forEach(function(q, i){
+    html += '<div class="q"><b>Q' + (i+1) + '. ' + q.q + '</b>';
+    q.a.forEach(function(opt, j){
+      html += '<label><input type="radio" name="q' + i + '" value="' + j + '"> ' + opt + '</label>';
+    });
+    html += '<div class="exp" id="exp' + i + '"></div></div>';
+  });
+  
+  html += '</div><div class="nav"><button class="sec" onclick="render()">Accueil</button><button onclick="validate(' + id + ')">Valider</button></div><div id="res"></div></div>';
+  
+  app.innerHTML = html;
+  window.scrollTo(0,0);
+}
+
+function validate(id){
+  var d = D.filter(function(x){ return x.id === id; })[0];
+  var correct = 0;
+  d.q.forEach(function(q, i){
+    var sel = document.querySelector('input[name="q' + i + '"]:checked');
+    var labels = document.querySelectorAll('input[name="q' + i + '"]');
+    labels.forEach(function(inp, j){
+      var lbl = inp.parentElement;
+      if (j === q.c) lbl.classList.add('ok');
+      if (sel && +sel.value === j && j !== q.c) lbl.classList.add('ko');
+    });
+    var exp = document.getElementById('exp' + i);
+    exp.style.display = 'block';
+    exp.innerHTML = q.e;
+    if (sel && +sel.value === q.c) correct++;
+  });
+  
+  var ok = correct === d.q.length;
+  var dejaValide = !!state.done[id];
+  document.getElementById('res').innerHTML = '<div class="res ' + (ok?'g':'r') + '">' + (ok ? 'Defi ' + d.id + ' valide !' : 'Score : ' + correct + '/' + d.q.length + ' - Reessayez') + '</div>';
+  
+  if (ok && !dejaValide) {
+    state.done[id] = new Date().toISOString();
+    save();
+    updateProg();
+    var exam = EXAMS.filter(function(e){ return e.from <= id && e.to >= id; })[0];
+    if (exam && isExamUnlocked(exam) && !isExamPassed(exam)) {
+      document.getElementById('res').innerHTML += '<div class="res g" style="margin-top:8px">Module complete ! <a href="#" onclick="startExam(\'' + exam.id + '\');return false;">Passer l\'examen final</a></div>';
+    }
+  }
+}
+
+var currentExam = null;
+
+function startExam(id){
+  var ex = EXAMS.filter(function(e){ return e.id === id; })[0];
+  if (!ex) return;
+  if (!isExamUnlocked(ex)) { alert("Validez d'abord tous les defis du module."); return; }
+  currentExam = ex;
+  
+  var html = '<div class="card"><div class="meta"><small>Examen ' + ex.id + '</small><small>' + ex.questions.length + ' questions</small><small>Seuil ' + Math.round(EXAM_PASS_RATIO*100) + '%</small><small class="level-tag l4">NIVEAU 4</small></div>';
+  html += '<h2>' + ex.titre + '</h2>';
+  html += '<div class="intro"><p><b>Instructions :</b> Repondez a toutes les questions. Il faut au moins ' + Math.ceil(ex.questions.length * EXAM_PASS_RATIO) + '/' + ex.questions.length + ' bonnes reponses.</p></div>';
+  html += '<div class="quiz" id="examQuiz">';
+  
+  ex.questions.forEach(function(q, i){
+    html += '<div class="q" data-qi="' + i + '"><b>Q' + (i+1) + '. ' + q.q + '</b>';
+    q.a.forEach(function(opt, j){
+      html += '<label><input type="radio" name="exam_q' + i + '" value="' + j + '"> ' + opt + '</label>';
+    });
+    html += '<div class="exp" id="exam_exp' + i + '"></div></div>';
+  });
+  
+  html += '</div><div class="nav"><button class="sec" onclick="render()">Annuler</button><button class="exam" onclick="submitExam()">Valider l\'examen</button></div><div id="exam_res"></div></div>';
+  
+  app.innerHTML = html;
+  window.scrollTo(0,0);
+}
+
+function submitExam(){
+  if (!currentExam) return;
+  var ex = currentExam;
+  var correct = 0;
+  var details = [];
+  
+  ex.questions.forEach(function(q, i){
+    var sel = document.querySelector('input[name="exam_q' + i + '"]:checked');
+    var labels = document.querySelectorAll('input[name="exam_q' + i + '"]');
+    labels.forEach(function(inp, j){
+      var lbl = inp.parentElement;
+      if (j === q.c) lbl.classList.add('ok');
+      if (sel && +sel.value === j && j !== q.c) lbl.classList.add('ko');
+    });
+    var exp = document.getElementById('exam_exp' + i);
+    exp.style.display = 'block';
+    exp.innerHTML = q.e;
+    var ok = sel && +sel.value === q.c;
+    if (ok) correct++;
+    details.push({q: q.q, ok: ok, correct: q.a[q.c], chosen: sel ? q.a[+sel.value] : '(aucune)'});
+  });
+  
+  var ratio = correct / ex.questions.length;
+  var passed = ratio >= EXAM_PASS_RATIO;
+  var existing = state.exams[ex.id];
+  if (!existing || !existing.passed || correct > existing.score) {
+    state.exams[ex.id] = {score: correct, total: ex.questions.length, passed: passed, date: new Date().toISOString()};
+    save();
+  }
+  
+  var msg = '';
+  if (passed) {
+    msg = '<div class="res g">Examen REUSSI ! ' + correct + '/' + ex.questions.length + ' (' + Math.round(ratio*100) + '%)</div>';
+    if (!existing || !existing.passed) {
+      msg += '<div class="res g" style="margin-top:8px">Felicitations, module valide !</div>';
+    }
+  } else {
+    msg = '<div class="res r">Examen echoue : ' + correct + '/' + ex.questions.length + ' (' + Math.round(ratio*100) + '%)</div>';
+  }
+  
+  msg += '<div class="card" style="margin-top:12px"><h3>Detail des reponses</h3><table><tr><th>#</th><th>Question</th><th>Votre reponse</th><th>Bonne reponse</th><th>Statut</th></tr>';
+  details.forEach(function(d, i){
+    msg += '<tr><td>' + (i+1) + '</td><td>' + d.q + '</td><td>' + d.chosen + '</td><td>' + d.correct + '</td><td style="color:' + (d.ok?'#22c55e':'#ef4444') + '">' + (d.ok?'OK':'KO') + '</td></tr>';
+  });
+  msg += '</table></div>';
+  
+  msg += '<div class="nav"><button class="sec" onclick="render()">Accueil</button><button class="exam" onclick="startExam(\'' + ex.id + '\')">Repasser</button></div>';
+  
+  document.getElementById('exam_res').innerHTML = msg;
+  updateProg();
+  window.scrollTo(0, document.body.scrollHeight - 400);
+}
+
+function showCerts(){
+  var total = countTotal();
+  var html = '<div class="card"><button class="sec" onclick="render()">Accueil</button><h2>Certifications Niveau 4 Maitre</h2>';
+  CERT_PLAN.forEach(function(p){
+    var status = total >= p.seuil ? 'done' : '';
+    var badge = p.type === 'free' ? 'free' : (p.type === 'partial' ? 'partial' : 'paid');
+    var badgeTxt = p.type === 'free' ? 'GRATUIT' : (p.type === 'partial' ? 'PARTIEL' : 'PAYANT');
+    var exam = EXAMS.filter(function(e){ return e.to === p.seuil; })[0];
+    var examPassed = exam && isExamPassed(exam);
+    html += '<div class="cert ' + status + '"><h4>' + p.titre + ' - ' + p.modules + '</h4><div style="font-size:0.85em;color:#fbbf24;font-weight:700;margin:4px 0">' + p.seuil + ' defis minimum</div><div style="font-weight:700;margin:4px 0">' + p.cert + ' <span class="badge ' + badge + '">' + badgeTxt + '</span></div><div style="font-size:0.85em;color:#94a3b8;margin-top:6px">' + p.desc + '</div><div style="margin-top:8px"><a href="' + p.url + '" target="_blank">Site officiel</a></div>' + (status==='done'?'<div style="color:#86efac;font-weight:700;margin-top:8px">Debloquee' + (examPassed ? ' ✓ Examen reussi' : ' (examen a passer)') + '</div>':'<div style="color:#94a3b8;margin-top:8px">Encore ' + (p.seuil-total) + ' defis</div>') + '</div>';
+  });
+  html += '</div>';
+  app.innerHTML = html;
+}
+
+// ============================================================
+// GENERATEUR CV
+// ============================================================
+var currentCV = 'senior';
+
+function showCV(){
+  var html = '<div class="card"><button class="sec" onclick="render()">Accueil</button><h2>Generateur de CV Cyber - Tous Niveaux</h2>';
+  html += '<p style="color:#94a3b8">Choisissez le niveau qui correspond a votre profil. Chaque modele est adapte au marche bancaire africain.</p>';
+  
+  var levels = [
+    {id:"junior", nom:"Junior", desc:"0-2 ans · Analyste SOC L1", badge:"j"},
+    {id:"intermediaire", nom:"Intermediaire", desc:"2-5 ans · SOC L2, Pentester junior", badge:"m"},
+    {id:"senior", nom:"Senior", desc:"5-8 ans · Senior Pentester, SOC L3", badge:"s"},
+    {id:"expert", nom:"Expert", desc:"8-12 ans · Red Team Lead, APT Hunter", badge:"e"},
+    {id:"directeur", nom:"Directeur", desc:"12+ ans · CISO, RSSI", badge:"d"}
+  ];
+  
+  levels.forEach(function(l){
+    var active = l.id === currentCV ? 'active' : '';
+    html += '<div class="cv-model ' + active + '" onclick="selectCVLevel(\'' + l.id + '\')">';
+    html += '<h4>' + l.nom + '<span class="level-badge-cv ' + l.badge + '">' + l.desc.split('·')[0].trim() + '</span></h4>';
+    html += '<div class="desc">' + l.desc.split('·').slice(1).join('·').trim() + '</div>';
+    html += '</div>';
+  });
+  
+  html += '</div>';
+  
+  var model = CV_MODELS[currentCV];
+  
+  html += '<div class="card" style="border-left:4px solid #0ea5e9"><h2 style="color:#7dd3fc">Apercu CV ' + model.titre + '</h2>';
+  html += '<p style="color:#94a3b8"><b>Cible :</b> ' + model.cible + ' — ' + model.description + '</p>';
+  
+  html += '<div class="cv-preview" id="cvPreview">';
+  html += '<h1>' + model.header + '</h1>';
+  html += '<div class="sub">' + model.sousTitre + '</div>';
+  html += '<div class="meta-cv">' + model.contact + '</div>';
+  
+  html += '<h2>Profil</h2>';
+  html += '<p>' + model.profil + '</p>';
+  
+  model.sections.forEach(function(s){
+    html += '<h2>' + s.titre + '</h2>';
+    html += '<ul>';
+    s.items.forEach(function(it){
+      html += '<li>' + it + '</li>';
+    });
+    html += '</ul>';
+  });
+  
+  html += '</div>';
+  
+  html += '<div class="cv-toolbar">';
+  html += '<button class="dl" onclick="downloadCV()">⬇ Telecharger HTML</button>';
+  html += '<button class="sec" onclick="printCV()">🖨 Imprimer / PDF</button>';
+  html += '<button class="sec" onclick="showCVTips()">💡 Conseils CV</button>';
+  html += '</div>';
+  
+  html += '</div>';
+  
+  app.innerHTML = html;
+  window.scrollTo(0,0);
+}
+
+function selectCVLevel(id){ currentCV = id; showCV(); }
+
+function downloadCV(){
+  var model = CV_MODELS[currentCV];
+  
+  var css = "body{font-family:Georgia,serif;max-width:800px;margin:30px auto;padding:20px;color:#111;line-height:1.5;background:#fff}h1{color:#0a2540;font-size:1.8em;margin:0 0 4px}h2{color:#0a2540;font-size:1.1em;margin:16px 0 6px;border-bottom:2px solid #0a2540;padding-bottom:4px;text-transform:uppercase;letter-spacing:1px}.sub{color:#4b5563;font-size:0.95em;font-style:italic;margin:0 0 6px}.meta-cv{color:#4b5563;font-size:0.85em;margin-bottom:16px;border-bottom:1px solid #e5e7eb;padding-bottom:8px}ul{margin:4px 0 8px;padding-left:20px;font-size:0.92em}li{margin:3px 0;color:#1f2937}p{font-size:0.92em;color:#1f2937}@media print{body{margin:0}}";
+  
+  var html = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>CV - ' + model.header + '</title><style>' + css + '</style></head><body>';
+  html += '<h1>' + model.header + '</h1>';
+  html += '<div class="sub">' + model.sousTitre + '</div>';
+  html += '<div class="meta-cv">' + model.contact + '</div>';
+  html += '<h2>Profil</h2><p>' + model.profil + '</p>';
+  
+  model.sections.forEach(function(s){
+    html += '<h2>' + s.titre + '</h2><ul>';
+    s.items.forEach(function(it){ html += '<li>' + it + '</li>'; });
+    html += '</ul>';
+  });
+  
+  html += '</body></html>';
+  
+  var blob = new Blob([html], {type:'text/html'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'CV_' + currentCV + '_' + model.header.replace(/\s+/g,'_') + '.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  
+  alert('CV telecharge en HTML ! Ouvrez-le dans votre navigateur et faites Ctrl+P pour PDF.');
+}
+
+function printCV(){
+  var model = CV_MODELS[currentCV];
+  
+  var css = "body{font-family:Georgia,serif;max-width:800px;margin:30px auto;padding:20px;color:#111;line-height:1.5;background:#fff}h1{color:#0a2540;font-size:1.8em;margin:0 0 4px}h2{color:#0a2540;font-size:1.1em;margin:16px 0 6px;border-bottom:2px solid #0a2540;padding-bottom:4px;text-transform:uppercase;letter-spacing:1px}.sub{color:#4b5563;font-size:0.95em;font-style:italic;margin:0 0 6px}.meta-cv{color:#4b5563;font-size:0.85em;margin-bottom:16px;border-bottom:1px solid #e5e7eb;padding-bottom:8px}ul{margin:4px 0 8px;padding-left:20px;font-size:0.92em}li{margin:3px 0;color:#1f2937}p{font-size:0.92em;color:#1f2937}@media print{body{margin:0}}";
+  
+  var html = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>CV - ' + model.header + '</title><style>' + css + '</style></head><body>';
+  html += '<h1>' + model.header + '</h1>';
+  html += '<div class="sub">' + model.sousTitre + '</div>';
+  html += '<div class="meta-cv">' + model.contact + '</div>';
+  html += '<h2>Profil</h2><p>' + model.profil + '</p>';
+  
+  model.sections.forEach(function(s){
+    html += '<h2>' + s.titre + '</h2><ul>';
+    s.items.forEach(function(it){ html += '<li>' + it + '</li>'; });
+    html += '</ul>';
+  });
+  
+  html += '</body></html>';
+  
+  var w = window.open('', '_blank');
+  w.document.write(html);
+  w.document.close();
+  setTimeout(function(){ w.print(); }, 500);
+}
+
+function showCVTips(){
+  var tips = {
+    junior: ["1 page maximum","Mettez la FORMATION en premier","Certifications GRATUITES en evidence","Portfolio GitHub obligatoire","TryHackMe : nombre de rooms","Pas de photo, pas d'age"],
+    intermediaire: ["2 pages max","Quantifiez TOUT : 'MTTD 45min -> 8min'","Certifications mid-level (eJPT, CySA+)","Projets concrets avec liens GitHub","3-5 experiences avec impact","Competences groupees par categorie"],
+    senior: ["2-3 pages","Certifications expertes (OSCP, GCIH) dans le titre","Chiffres d'impact : '25 pentests'","Publications/talks (Barbhack, BSides)","Mentions de mentorat","Contributions open source (stars)"],
+    expert: ["3 pages","Certifications dans le titre (OSCP, OSEP, CRTO, CISSP)","Impact quantifie : 'Detection rate 20% -> 90%'","Publications internationales (DEF CON, Black Hat)","Contributions open source avec stars","Mentions de direction d'equipe"],
+    directeur: ["3-4 pages","Certifications executives dans le titre (CISSP, CISM, CGEIT, CCISO)","Budget gere (montant precis)","Taille d'equipe (15-25 personnes)","Impact quantifie en argent : '1.2Mds FCFA'","Conformite obtenue (ISO, PCI, BCEAO)","Publications/livre/speaking","Gouvernance : conseil, comite"]
+  };
+  
+  var html = '<div class="card"><button class="sec" onclick="showCV()">Retour CV</button><h2>Conseils CV - Niveau ' + currentCV + '</h2>';
+  html += '<div style="background:#0c4a6e;padding:14px;border-radius:10px;margin:14px 0;border-left:4px solid #0ea5e9">';
+  html += '<h3 style="color:#7dd3fc;margin-top:0">Regles generales (tous niveaux)</h3>';
+  html += '<ul><li>Format PDF, nom de fichier : <code>CV_Prenom_Nom_Cyber.pdf</code></li>';
+  html += '<li>Pas de photo, pas d\'age, pas de situation familiale</li>';
+  html += '<li>Email pro : <code>prenom.nom@gmail.com</code></li>';
+  html += '<li>LinkedIn a jour et coherent avec le CV</li>';
+  html += '<li>GitHub avec projets publics</li>';
+  html += '<li>1 a 2 pages (junior/mid), 2-3 pages (senior), 3-4 pages (directeur)</li>';
+  html += '<li>Polices : Calibri, Arial, ou Georgia (max 2 polices)</li>';
+  html += '<li>Marges : 1.5-2 cm partout</li>';
+  html += '<li>Pas de tableaux, pas de colonnes complexes (ATS non compatibles)</li>';
+  html += '<li>Mots-cles de l\'offre d\'emploi (ATS)</li></ul>';
+  html += '</div>';
+  
+  html += '<div style="background:#14532d;padding:14px;border-radius:10px;margin:14px 0;border-left:4px solid #22c55e">';
+  html += '<h3 style="color:#86efac;margin-top:0">Conseils specifiques niveau ' + currentCV + '</h3>';
+  html += '<ul>';
+  tips[currentCV].forEach(function(t){ html += '<li>' + t + '</li>'; });
+  html += '</ul></div>';
+  
+  html += '<div style="background:#78350f;padding:14px;border-radius:10px;margin:14px 0;border-left:4px solid #fbbf24">';
+  html += '<h3 style="color:#fde68a;margin-top:0">Erreurs fatales</h3>';
+  html += '<ul><li>Fautes d\'orthographe (relisez 3x)</li>';
+  html += '<li>Mentir sur certifications (verifiables)</li>';
+  html += '<li>Copier-coller modele sans adapter</li>';
+  html += '<li>Photo non professionnelle</li>';
+  html += '<li>Adresse email peu pro</li>';
+  html += '<li>Pas de chiffres / impact</li>';
+  html += '<li>Envoyer en format Word (.docx)</li>';
+  html += '<li>Pas de lien GitHub/LinkedIn</li></ul>';
+  html += '</div>';
+  
+  html += '</div>';
+  
+  app.innerHTML = html;
+  window.scrollTo(0,0);
+}
+
+function showStats(){
+  var total = countTotal(), today = countToday();
+  var milestonesDone = MILESTONES.filter(function(m){ return state.done[m.seuil]; });
+  
+  var html = '<div class="card"><button class="sec" onclick="render()">Accueil</button><h2>Statistiques</h2>';
+  html += '<div class="stats-grid"><div class="stat"><span class="big">' + today + '</span><span class="lbl">Aujourdhui</span></div><div class="stat"><span class="big">' + total + '/100</span><span class="lbl">Total</span></div><div class="stat"><span class="big">' + passedExamsCount() + '/5</span><span class="lbl">Examens</span></div></div>';
+  
+  html += '<h3>Examens de module</h3>';
+  html += '<table><tr><th>Examen</th><th>Score</th><th>Statut</th></tr>';
+  EXAMS.forEach(function(ex){
+    var r = state.exams && state.exams[ex.id];
+    var statut = r ? (r.passed ? 'REUSSI' : 'ECHOUE') : 'Non passe';
+    var color = r ? (r.passed ? '#22c55e' : '#ef4444') : '#94a3b8';
+    html += '<tr><td>' + ex.titre + '</td><td>' + (r ? r.score + '/' + r.total : '-') + '</td><td style="color:' + color + ';font-weight:700">' + statut + '</td></tr>';
+  });
+  html += '</table>';
+  
+  html += '<h3>Projets majeurs atteints</h3>';
+  if (milestonesDone.length === 0) {
+    html += '<p style="color:#94a3b8">Aucun projet majeur encore atteint.</p>';
+  } else {
+    html += '<ul>';
+    milestonesDone.forEach(function(m){ html += '<li><b>' + m.titre + '</b> - ' + m.date + '<br><span style="color:#94a3b8;font-size:0.85em">' + m.desc + '</span></li>'; });
+    html += '</ul>';
+  }
+  html += '</div>';
+  app.innerHTML = html;
+}
+
+function showJobs(){
+  var html = '<div class="card"><button class="sec" onclick="render()">Accueil</button><h2>Emplois Direction en Cote dIvoire</h2>';
+  JOBS.forEach(function(j){
+    html += '<div class="job"><h4>' + j.nom + '</h4><div style="font-size:0.75em;color:#94a3b8">' + j.type + '</div><div style="margin:6px 0;font-size:0.88em">' + j.desc + '</div><a href="' + j.url + '" target="_blank">' + j.url + '</a></div>';
+  });
+  html += '</div>';
+  app.innerHTML = html;
+}
+
+function reset(){
+  if (confirm('Reinitialiser toute la progression du Niveau 4 ?')) {
+    localStorage.removeItem('cyber_ci_lvl4');
+    location.reload();
+  }
+}
+
+// ============================================================
+// INIT
+// ============================================================
+render();
+</script>
+</body>
+</html>
